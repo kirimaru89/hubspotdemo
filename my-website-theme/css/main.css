@@ -374,3 +374,20 @@ header.hidden {
 }
 
 /* security-compliance */
+.trustedby-img {
+  position: absolute;
+  left: -50px;
+  top: -70px;
+  pointer-events: none;
+}
+.trusted-card {
+  box-shadow: 0 6px 20px 5px rgba(0, 0, 0, 0.1);
+}
+.big-3x {
+  font-size: 100px;
+  font-weight: bold;
+  background: linear-gradient(66.64deg, #ff5920 10.29%, #ffdc00 90.54%);
+  -webkit-background-clip: text; /* For Safari */
+  background-clip: text; /* For Chrome, Edge, and Firefox */
+  color: transparent;
+}
