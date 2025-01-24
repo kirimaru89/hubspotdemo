@@ -468,7 +468,7 @@ details summary:after {
   transform: translateY(-50%);
   width: 26px;
   height: 26px;
-  background-image: url("/assets/icon/close.svg");
+  background-image: url("{{ get_asset_url('../images/module-icons/open.svg') }}");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -476,7 +476,7 @@ details summary:after {
 }
 
 details[open] summary:after {
-  background-image: url("/assets/icon/open.svg");
+  background-image: url("{{ get_asset_url('../images/module-icons/close.svg') }}");
 }
 
 .frequently-asked-overlay {
