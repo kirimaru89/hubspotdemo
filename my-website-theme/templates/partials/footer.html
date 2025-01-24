@@ -1,43 +1,101 @@
-<!--
-  templateType: global_partial
-  label: Footer
--->
 <footer class="footer">
-  {% dnd_area "footer"
-    label="Footer",
-    class="footer__container content-wrapper"
-  %}
+<div class="container pt-5 pb-4 text-white">
+<div class="row mb-5 pb-5">
+  <div
+    class="col-xl-4 col-12 d-flex d-xl-block justify-content-around align-items-center mb-5 mb-xl-0"
+  >
+    <div class="d-flex align-items-center gap-3">
+      <img src="{{ get_asset_url('../../images/module-icons/logo.svg') }}" alt="logo-hubspot" />
+      <div class="text-capitalize lh-sm">
+        creative <br />
+        force
+      </div>
+    </div>
 
-    {# Social follow and copyright #}
+    <div class="mt-0 mt-xl-5 d-flex align-items-center gap-3 ms-1">
+      <img
+        src="{{ get_asset_url('../../images/module-icons/g2.svg') }}"
+        alt=""
+        class="bg-white"
+        width="30px"
+      />
+      <div>
+        <img class="d-block" src="{{ get_asset_url('../../images/module-icons/stars.svg') }}" alt="" />
+        <div class="nowrap">Read our review</div>
+      </div>
+    </div>
+    <div class="mt-0 mt-xl-3 d-flex align-items-center gap-3 ms-1">
+      <img
+        src="{{ get_asset_url('../../images/module-icons/security-1.svg') }}"
+        alt=""
+        class="bg-white"
+        width="30px"
+      />
+      <div class="nowrap">
+        <div>SOC-2</div>
+        <div>Read our review</div>
+      </div>
+    </div>
+  </div>
 
-    {% dnd_section %}
-      {% dnd_column %}
-        {% dnd_row %}
-          {% dnd_module path="../../modules/social-follow" %}
-            {% module_attribute "social_link" is_json=True %}
-              [
-                {"social_account": "facebook-f"},
-                {"social_account": "linkedin-in"},
-                {"social_account": "twitter"},
-                {"social_account": "instagram"}
-              ]
-            {% end_module_attribute %}
-          {% end_dnd_module %}
-        {% end_dnd_row %}
-        {% dnd_row
-          margin={
-            "top": 12,
-            "bottom": 12
-          }
-        %}
-          {% dnd_module
-            path="@hubspot/rich_text",
-            html='<div style="text-align: center; font-size: 0.7rem;"><span>© {{ year }} All rights reserved.</span></div>'
-          %}
-          {% end_dnd_module %}
-        {% end_dnd_row %}
-      {% end_dnd_column %}
-    {% end_dnd_section %}
+  <div class="col-xl-2 col-lg-3 col-6">
+    <h4>E-Comm Platform</h4>
+    <ul class="mt-4">
+      <li>Workflow Automation</li>
+      <li class="mt-2">Sample Mangement</li>
+      <li class="mt-2">Asset Hub</li>
+      <li class="mt-2">Review & Approval</li>
+      <li class="mt-2">Compare Creative Force</li>
+    </ul>
+  </div>
+  <div class="col-xl-2 col-lg-3 col-6">
+    <h4>Extensions</h4>
+    <ul class="mt-4">
+      <li>Copywriting</li>
+      <li class="mt-2">Editoral Projects</li>
+      <li class="mt-2">Planning Calendar</li>
+      <li class="mt-2">Video Production</li>
+      <li class="mt-2">VPI Management</li>
+    </ul>
+  </div>
+  <div class="col-xl-2 col-lg-3 col-6 mt-3 mt-lg-0">
+    <h4>User Resources</h4>
+    <ul class="mt-4">
+      <li>Developer API</li>
+      <li class="mt-2">Downloads</li>
+      <li class="mt-2">Help Center</li>
+      <li class="mt-2">Partner & Integrations</li>
+      <li class="mt-2">Release Notes</li>
+    </ul>
+  </div>
+  <div class="col-xl-2 col-lg-3 col-6 mt-3 mt-lg-0">
+    <h4>Company</h4>
+    <ul class="mt-4">
+      <li>About</li>
+      <li class="mt-2">Blog</li>
+      <li class="mt-2">Careers</li>
+      <li class="mt-2">Customer Stories</li>
+      <li class="mt-2">Press</li>
+      <li class="mt-2">dreem.ai</li>
+      <li class="mt-2">creativeoperations.com</li>
+    </ul>
+  </div>
+</div>
 
-  {% end_dnd_area %}
+<div class="end-footer pt-3 pb-1">
+  <div class="d-lg-flex d-block justify-content-between">
+    <div class="d-flex flex-md-row flex-column gap-md-4 gap-2">
+      <a href=""> © 2024 Creative Force, Inc. All rights reserved. </a>
+      <a href=""> Legal & Security </a>
+      <a href=""> Privacy Policy </a>
+    </div>
+
+    <div class="d-flex gap-4 mt-4 mt-lg-0">
+      <img src="{{ get_asset_url('../../images/module-icons/facebook.svg') }}" />
+      <img src="{{ get_asset_url('../../images/module-icons/tiktok.svg') }}" />
+      <img src="{{ get_asset_url('../../images/module-icons/youtube.svg') }}" />
+    </div>
+  </div>
+</div>
+</div>
 </footer>
