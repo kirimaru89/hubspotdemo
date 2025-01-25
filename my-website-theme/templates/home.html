@@ -26,10 +26,17 @@
         <div class="d-flex align-items-center gap-2">
           {% text "final_assets_yearly" label="Final Assets Yearly Text",
           value="final assets yearly" %}
-          <img
-            src="{{ get_asset_url('../images/module-icons/info.svg') }}"
-            alt="info"
-          />
+          <div class="tooltip-wrap">
+            <img
+              src="{{ get_asset_url('../images/module-icons/info.svg') }}"
+              alt="info"
+            />
+            <div class="tooltip-content">
+              Adjust the slider to estimate your monthly pricing based on the
+              number of digital assets you need to manage. This includes photos,
+              videos, and other media files processed through Creative Force.
+            </div>
+          </div>
         </div>
       </div>
       <div class="range mt-4">

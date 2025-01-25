@@ -1,101 +1,112 @@
 <footer class="footer">
 <div class="container pt-5 pb-4 text-white">
-<div class="row mb-5 pb-5">
-  <div
-    class="col-xl-4 col-12 d-flex d-xl-block justify-content-around align-items-center mb-5 mb-xl-0"
-  >
-    <div class="d-flex align-items-center gap-3">
-      <img src="{{ get_asset_url('../../images/module-icons/logo.svg') }}" alt="logo-hubspot" />
-      <div class="text-capitalize lh-sm">
-        {% text "logo_text_1" label="Logo Text Line 1", value="Creative" %} <br />
-        {% text "logo_text_2" label="Logo Text Line 2", value="Force" %}
+        <div class="row mb-5 pb-5">
+          <div
+            class="col-xl-4 col-12 d-flex d-xl-block justify-content-around align-items-center mb-5 mb-xl-0"
+          >
+            <div class="d-flex align-items-center gap-3">
+              <img src="{{ get_asset_url('../../images/module-icons/logo.svg') }}" alt="logo-hubspot" />
+              <div class="text-capitalize lh-sm">
+                creative <br />
+                force
+              </div>
+            </div>
+
+            <div class="mt-0 mt-xl-5 d-flex align-items-center gap-3 ms-1">
+              <img
+                src="{{ get_asset_url('../../images/module-icons/g2.svg') }}"
+                alt=""
+                class="bg-white"
+                width="30px"
+              />
+              <div class="d-sm-block d-none">
+                <img
+                  class="d-block"
+                  src="{{ get_asset_url('../../images/module-icons/stars.svg') }}"
+                  alt=""
+                />
+                <div class="nowrap">Read our review</div>
+              </div>
+            </div>
+            <div class="mt-0 mt-xl-3 d-flex align-items-center gap-3 ms-1">
+              <img
+                src="{{ get_asset_url('../../images/module-icons/security-1.svg') }}"
+                alt=""
+                class="bg-white"
+                width="30px"
+              />
+              <div class="nowrap d-sm-block d-none">
+                <div>SOC-2</div>
+                <div>Read our review</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-2 col-lg-3 col-6">
+            <h4>E-Comm Platform</h4>
+            <ul class="mt-4">
+              <li>Workflow Automation</li>
+              <li class="mt-2">Sample Mangement</li>
+              <li class="mt-2">Asset Hub</li>
+              <li class="mt-2">Review & Approval</li>
+              <li class="mt-2">Compare Creative Force</li>
+            </ul>
+          </div>
+          <div class="col-xl-2 col-lg-3 col-6">
+            <h4>Extensions</h4>
+            <ul class="mt-4">
+              <li>Copywriting</li>
+              <li class="mt-2">Editoral Projects</li>
+              <li class="mt-2">Planning Calendar</li>
+              <li class="mt-2">Video Production</li>
+              <li class="mt-2">VPI Management</li>
+            </ul>
+          </div>
+          <div class="col-xl-2 col-lg-3 col-6 mt-3 mt-lg-0">
+            <h4>User Resources</h4>
+            <ul class="mt-4">
+              <li>Developer API</li>
+              <li class="mt-2">Downloads</li>
+              <li class="mt-2">Help Center</li>
+              <li class="mt-2">Partner & Integrations</li>
+              <li class="mt-2">Release Notes</li>
+            </ul>
+          </div>
+          <div class="col-xl-2 col-lg-3 col-6 mt-3 mt-lg-0">
+            <h4>Company</h4>
+            <ul class="mt-4">
+              <li>About</li>
+              <li class="mt-2">Blog</li>
+              <li class="mt-2">Careers</li>
+              <li class="mt-2">Customer Stories</li>
+              <li class="mt-2">Press</li>
+              <li class="mt-2">dreem.ai</li>
+              <li class="mt-2">creativeoperations.com</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="end-footer pt-3 pb-1">
+          <div class="d-lg-flex d-block justify-content-between">
+            <div class="d-flex flex-md-row flex-column gap-md-4 gap-2">
+              <a href=""> © 2024 Creative Force, Inc. All rights reserved. </a>
+              <a href=""> Legal & Security </a>
+              <a href=""> Privacy Policy </a>
+            </div>
+
+            <div class="d-flex gap-4 mt-4 mt-lg-0">
+              <img
+                src="{{ get_asset_url('../../images/module-icons/facebook.svg') }}"
+              />
+              <img
+                src="{{ get_asset_url('../../images/module-icons/tiktok.svg') }}"
+              />
+              <img
+                src="{{ get_asset_url('../../images/module-icons/youtube.svg') }}"
+              />
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-
-    <div class="mt-0 mt-xl-5 d-flex align-items-center gap-3 ms-1">
-      <img
-        src="{{ get_asset_url('../../images/module-icons/g2.svg') }}"
-        alt=""
-        class="bg-white"
-        width="30px"
-      />
-      <div>
-        <img class="d-block" src="{{ get_asset_url('../../images/module-icons/stars.svg') }}" alt="" />
-        <div class="nowrap">{% text "g2_review_text" label="G2 Review Text", value="Read our review" %}</div>
-      </div>
-    </div>
-    <div class="mt-0 mt-xl-3 d-flex align-items-center gap-3 ms-1">
-      <img
-        src="{{ get_asset_url('../../images/module-icons/security-1.svg') }}"
-        alt=""
-        class="bg-white"
-        width="30px"
-      />
-      <div class="nowrap">
-        <div>{% text "soc2_text" label="SOC-2 Text", value="SOC-2" %}</div>
-        <div>{% text "security_review_text" label="Security Review Text", value="Read our review" %}</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-xl-2 col-lg-3 col-6">
-    <h4>{% text "platform_heading" label="Platform Section Heading", value="E-Comm Platform" %}</h4>
-    <ul class="mt-4">
-      <li>{% text "platform_link_1" label="Platform Link 1", value="Workflow Automation" %}</li>
-      <li class="mt-2">{% text "platform_link_2" label="Platform Link 2", value="Sample Mangement" %}</li>
-      <li class="mt-2">{% text "platform_link_3" label="Platform Link 3", value="Asset Hub" %}</li>
-      <li class="mt-2">{% text "platform_link_4" label="Platform Link 4", value="Review & Approval" %}</li>
-      <li class="mt-2">{% text "platform_link_5" label="Platform Link 5", value="Compare Creative Force" %}</li>
-    </ul>
-  </div>
-  <div class="col-xl-2 col-lg-3 col-6">
-    <h4>{% text "extensions_heading" label="Extensions Section Heading", value="Extensions" %}</h4>
-    <ul class="mt-4">
-      <li>{% text "extensions_link_1" label="Extensions Link 1", value="Copywriting" %}</li>
-      <li class="mt-2">{% text "extensions_link_2" label="Extensions Link 2", value="Editorial Projects" %}</li>
-      <li class="mt-2">{% text "extensions_link_3" label="Extensions Link 3", value="Planning Calendar" %}</li>
-      <li class="mt-2">{% text "extensions_link_4" label="Extensions Link 4", value="Video Production" %}</li>
-      <li class="mt-2">{% text "extensions_link_5" label="Extensions Link 5", value="VPI Management" %}</li>
-    </ul>
-  </div>
-  <div class="col-xl-2 col-lg-3 col-6 mt-3 mt-lg-0">
-    <h4>{% text "user_resources_heading" label="User Resources Section Heading", value="User Resources" %}</h4>
-    <ul class="mt-4">
-      <li>{% text "user_resources_link_1" label="User Resources Link 1", value="Developer API" %}</li>
-      <li class="mt-2">{% text "user_resources_link_2" label="User Resources Link 2", value="Downloads" %}</li>
-      <li class="mt-2">{% text "user_resources_link_3" label="User Resources Link 3", value="Help Center" %}</li>
-      <li class="mt-2">{% text "user_resources_link_4" label="User Resources Link 4", value="Partner & Integrations" %}</li>
-      <li class="mt-2">{% text "user_resources_link_5" label="User Resources Link 5", value="Release Notes" %}</li>
-    </ul>
-  </div>
-  <div class="col-xl-2 col-lg-3 col-6 mt-3 mt-lg-0">
-    <h4>{% text "company_heading" label="Company Section Heading", value="Company" %}</h4>
-    <ul class="mt-4">
-      <li>{% text "company_link_1" label="Company Link 1", value="About" %}</li>
-      <li class="mt-2">{% text "company_link_2" label="Company Link 2", value="Blog" %}</li>
-      <li class="mt-2">{% text "company_link_3" label="Company Link 3", value="Careers" %}</li>
-      <li class="mt-2">{% text "company_link_4" label="Company Link 4", value="Customer Stories" %}</li>
-      <li class="mt-2">{% text "company_link_5" label="Company Link 5", value="Press" %}</li>
-      <li class="mt-2">{% text "company_link_6" label="Company Link 6", value="dreem.ai" %}</li>
-      <li class="mt-2">{% text "company_link_7" label="Company Link 7", value="creativeoperations.com" %}</li>
-    </ul>
-  </div>
-</div>
-
-<div class="end-footer pt-3 pb-1">
-  <div class="d-lg-flex d-block justify-content-between">
-    <div class="d-flex flex-md-row flex-column gap-md-4 gap-2">
-      <a href="">{% text "copyright_text" label="Copyright Text", value="© 2024 Creative Force, Inc. All rights reserved." %}</a>
-      <a href="">{% text "legal_text" label="Legal Link Text", value="Legal & Security" %}</a>
-      <a href="">{% text "privacy_text" label="Privacy Link Text", value="Privacy Policy" %}</a>
-    </div>
-
-    <div class="d-flex gap-4 mt-4 mt-lg-0">
-      <img src="{{ get_asset_url('../../images/module-icons/facebook.svg') }}" />
-      <img src="{{ get_asset_url('../../images/module-icons/tiktok.svg') }}" />
-      <img src="{{ get_asset_url('../../images/module-icons/youtube.svg') }}" />
-    </div>
-  </div>
-</div>
-</div>
+    </footer>
 </footer>
