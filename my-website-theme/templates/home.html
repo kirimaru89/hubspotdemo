@@ -212,7 +212,7 @@
                 <ul class="mt-3">
                   <li class="d-flex align-items-center gap-2">
                     <span class="fw-bold">{% text "everything_in_core" label="Everything in Core Text", value="Everything in Core +" %}</span>
-                  </li>
+                  </li>               
                   <li class="d-flex align-items-center gap-2">
                     <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
                     {% text "unlimited_workspaces" label="Unlimited Workspaces Text", value="Unlimited Workspaces" %}
@@ -435,21 +435,21 @@
                   {% text "vendor_content_desc" label="Vendor Content Description", value="Streamline your workflow by managing vendor-provided assets from initial request to final upload, ensuring consistency and efficiency at every step." %}
                 </p>
                 <ul class="mt-3">
-                  <li class="mt-1">
+                  <li class="mt-1 d-flex align-items-center gap-1">
                     <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" class="me-1" />
                     {% text "upload_portal" label="Upload Portal Text", value="Upload directly in the portal" %}
                   </li>
-                  <li class="mt-1">
+                  <li class="mt-1 d-flex align-items-center gap-1">
                     <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" class="me-1" />
-                    Track unique image request IDs
+                    {% text "track_unique_image_request_ids" label="Track Unique Image Request IDs Text", value="Track unique image request IDs" %}
                   </li>
-                  <li class="mt-1">
+                  <li class="mt-1 d-flex align-items-center gap-1">
                     <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" class="me-1" />
-                    Visual style guides and standards
+                    {% text "visual_style_guides_and_standards" label="Visual Style Guides and Standards Text", value="Visual style guides and standards" %}
                   </li>
-                  <li class="mt-1">
+                  <li class="mt-1 d-flex align-items-center gap-1">
                     <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" class="me-1" />
-                    Approvals for faster turnaround
+                    {% text "approvals_for_faster_turnaround" label="Approvals for Faster Turnaround Text", value="Approvals for faster turnaround" %}
                   </li>
                 </ul>
                 <button class="blue-btn readmore-btn mt-3">read more</button>
@@ -490,21 +490,21 @@
                   ensuring teams stay aligned and projects run smoothly.
                 </p>
                 <ul class="mt-3">
-                  <li class="mt-1">
+                <li class="mt-1 d-flex align-items-center gap-1">
                     <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" class="me-1" />
-                    Centralized editorial assets
+                    {% text "centralized_editorial_assets" label="Centralized Editorial Assets Text", value="Centralized editorial assets" %}
                   </li>
-                  <li class="mt-1">
+                  <li class="mt-1 d-flex align-items-center gap-1">
                     <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" class="me-1" />
-                    Collaborate in real-time
+                    {% text "collaborate_in_real_time" label="Collaborate in Real-Time Text", value="Collaborate in real-time" %}
                   </li>
-                  <li class="mt-1">
+                  <li class="mt-1 d-flex align-items-center gap-1">
                     <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" class="me-1" />
-                    Track progress and milestones
+                    {% text "track_progress_and_milestones" label="Track Progress and Milestones Text", value="Track progress and milestones" %}
                   </li>
-                  <li class="mt-1">
+                  <li class="mt-1 d-flex align-items-center gap-1">
                     <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" class="me-1" />
-                    Integrate visual guides
+                    {% text "integrate_visual_guides" label="Integrate Visual Guides Text", value="Integrate visual guides" %}
                   </li>
                 </ul>
                 <button class="blue-btn readmore-btn mt-3">read more</button>
@@ -532,10 +532,9 @@
     <div
       class="container color-dark-purple color-dark-purple position-relative"
     >
-      <h4>Creative Force Cloud.</h4>
+      <h2>{% text "creative_force_cloud_title" label="Creative Force Cloud Title", value="Creative Force Cloud." %}</h2>
       <p>
-        Scalable, secure, and built for seamless collaboration <br />
-        across unlimited users and clients.
+        {% text "creative_force_cloud_desc" label="Creative Force Cloud Description", value="Scalable, secure, and built for seamless collaboration across unlimited users and clients." %}
       </p>
       <table class="table table-bordered mt-4">
         <colgroup>
@@ -551,22 +550,22 @@
             <td class="d-flex align-items-center gap-2">
               User <img src="{{ get_asset_url('../images/module-icons/info.svg') }}" class="opacity-25" />
             </td>
-            <td>Unlimited</td>
-            <td>Unlimited</td>
-            <td>Unlimited</td>
+            <td>{% text "unlimited_users" label="Unlimited Users Text", value="Unlimited" %}</td>
+            <td>{% text "unlimited_users" label="Unlimited Users Text", value="Unlimited" %}</td>
+            <td>{% text "unlimited_users" label="Unlimited Users Text", value="Unlimited" %}</td>
           </tr>
           <tr>
             <td class="d-flex align-items-center gap-2">
-              Workspaces (Clients)
+              {% text "workspaces_clients" label="Workspaces (Clients) Text", value="Workspaces (Clients)" %}
               <img src="{{ get_asset_url('../images/module-icons/info.svg') }}" class="opacity-25" />
             </td>
-            <td>1</td>
-            <td>3</td>
-            <td>Unlimited</td>
+            <td>{% text "one" label="One Text", value="1" %}</td>
+            <td>{% text "three" label="Three Text", value="3" %}</td>
+            <td>{% text "unlimited_users" label="Unlimited Users Text", value="Unlimited" %}</td>
           </tr>
           <tr>
             <td class="d-flex align-items-center gap-2">
-              Additional Workspaces
+              {% text "additional_workspaces" label="Additional Workspaces Text", value="Additional Workspaces" %}
               <img src="{{ get_asset_url('../images/module-icons/info.svg') }}" class="opacity-25" />
             </td>
             <td></td>
@@ -574,73 +573,73 @@
             <td>$</td>
           </tr>
           <tr>
-            <td>Cloud Based</td>
+            <td>{% text "cloud_based" label="Cloud Based Text", value="Cloud Based" %}</td>
             <td><img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" /></td>
             <td><img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" /></td>
             <td><img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" /></td>
           </tr>
           <tr>
-            <td>Multi-Tenant Database</td>
+            <td>{% text "multi_tenant_database" label="Multi-Tenant Database Text", value="Multi-Tenant Database" %}</td>
             <td><img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" /></td>
             <td><img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" /></td>
             <td><img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" /></td>
           </tr>
           <tr>
-            <td>Regional Multi-Tenant Binary Storage</td>
+            <td>{% text "regional_multi_tenant_binary_storage" label="Regional Multi-Tenant Binary Storage Text", value="Regional Multi-Tenant Binary Storage" %}</td>
             <td><img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" /></td>
             <td><img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" /></td>
             <td><img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" /></td>
           </tr>
           <tr>
-            <td>Full Redundant Back-up</td>
+            <td>{% text "full_redundant_back_up" label="Full Redundant Back-up Text", value="Full Redundant Back-up" %}</td>
             <td></td>
             <td>$</td>
             <td>$</td>
           </tr>
           <tr>
-            <td>Dedicated Database</td>
+            <td>{% text "dedicated_database" label="Dedicated Database Text", value="Dedicated Database" %}</td>
             <td></td>
             <td></td>
             <td>$</td>
           </tr>
           <tr>
-            <td>Dedicated Binary Storage</td>
+            <td>{% text "dedicated_binary_storage" label="Dedicated Binary Storage Text", value="Dedicated Binary Storage" %}</td>
             <td></td>
             <td></td>
             <td>$</td>
           </tr>
           <tr>
-            <td>API</td>
+            <td>{% text "api" label="API Text", value="API" %}</td>
             <td><img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" /></td>
             <td><img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" /></td>
             <td><img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" /></td>
           </tr>
           <tr>
-            <td>Webhooks</td>
+            <td>{% text "webhooks" label="Webhooks Text", value="Webhooks" %}</td>
             <td><img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" /></td>
             <td><img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" /></td>
             <td><img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" /></td>
           </tr>
           <tr>
-            <td>File Automation</td>
+            <td>{% text "file_automation" label="File Automation Text", value="File Automation" %}</td>
             <td><img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" /></td>
             <td><img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" /></td>
             <td><img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" /></td>
           </tr>
           <tr>
-            <td>FTP Server(10 Gb)</td>
+            <td>{% text "ftp_server_10_gb" label="FTP Server (10 Gb) Text", value="FTP Server(10 Gb)" %}</td>
             <td></td>
             <td><img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" /></td>
             <td><img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" /></td>
           </tr>
           <tr>
-            <td>API</td>
+            <td>{% text "api" label="API Text", value="API" %}</td>
             <td><img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" /></td>
             <td><img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" /></td>
             <td><img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" /></td>
           </tr>
           <tr>
-            <td>API</td>
+            <td>{% text "api" label="API Text", value="API" %}</td>
             <td><img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" /></td>
             <td><img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" /></td>
             <td><img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" /></td>
@@ -654,7 +653,7 @@
     <div
       class="position-absolute show-all fw-semibold text-center w-100 text-decoration-underline"
     >
-      Show all
+      {% text "show_all" label="Show All Text", value="Show all" %}
     </div>
   </section>
 
