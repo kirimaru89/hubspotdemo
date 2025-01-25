@@ -4,1038 +4,1545 @@
   label: Home
   screenshotPath: ../images/template-previews/home.png
 -->
-{% extends "./layouts/base.html" %}
+{% extends "./layouts/base.html" %} {% block body %}
 
-{% block body %}
-  
-  <section class="top-header pt-5 px-4 pb-5">
-        <div class="container mt-5 mb-4 text-white">
-          <h1 class="mt-3 pt-lg-0 pt-5">
-            {% text "choose_plan_heading" label="Choose Plan Heading", value="Choose the best plan for your business" %}
-          </h1>
+<section class="top-header pt-5 px-4 pb-5">
+  <div class="container mt-5 mb-4 text-white">
+    <h1 class="mt-3 pt-lg-0 pt-5">
+      {% text "choose_plan_heading" label="Choose Plan Heading", value="Choose
+      the best plan for your business" %}
+    </h1>
+    <div class="mt-2">
+      {% text "plan_description" label="Plan Description", value="Find the
+      perfect plan tailored to your organization's production volume and needs."
+      %}
+    </div>
+
+    <div class="mt-4 mb-2">
+      <div class="estimation-range text-white flex-wrap">
+        <span class="px-2 py-1 text-center estimation">Estimation</span>
+        {% text "deliver_text" label="Deliver Text", value="I deliver" %}
+        <span class="off-white-btn py-1 px-2" id="deliver">10,000</span>
+        <div class="d-flex align-items-center gap-2">
+          {% text "final_assets_yearly" label="Final Assets Yearly Text",
+          value="final assets yearly" %}
+          <img
+            src="{{ get_asset_url('../images/module-icons/info.svg') }}"
+            alt="info"
+          />
+        </div>
+      </div>
+      <div class="range mt-4">
+        <div class="range-slider">
+          <input
+            type="range"
+            min="0"
+            max="220000"
+            value="10000"
+            class="range-input"
+            id="range4"
+            step="1"
+          />
+          <div class="input-color-container">
+            <div class="input-color"></div>
+          </div>
+          <div class="sliderticks tick-1"></div>
+        </div>
+        <div class="sliderticks tick-2" style="pointer-events: all"></div>
+      </div>
+    </div>
+
+    <div class="row mt-5 pt-3 gap-4 gap-md-0">
+      <div class="col-md-4 col-sm-12">
+        <div class="p-4 bg-white rounded color-dark-purple h-100">
+          <h4 class="color-blue">
+            {% text "starter_title" label="Starter Title", value="Starter" %}
+          </h4>
           <div class="mt-2">
-            {% text "plan_description" label="Plan Description", value="Find the perfect plan tailored to your organization's production volume and needs." %}
+            {% text "starts_at" label="Starts At Text", value="Starts at" %}
           </div>
-
-          <div class="mt-4 mb-2">
-            <div class="estimation-range text-white flex-wrap">
-              <span class="px-2 py-1 text-center estimation">Estimation</span>
-              {% text "deliver_text" label="Deliver Text", value="I deliver" %}
-              <span class="off-white-btn py-1 px-2" id="deliver">10,000</span>
-              <div class="d-flex align-items-center gap-2">
-                {% text "final_assets_yearly" label="Final Assets Yearly Text", value="final assets yearly" %}
-                <img src="{{ get_asset_url('../images/module-icons/info.svg') }}" alt="info" />
-              </div>
-            </div>
-            <div class="range mt-4">
-              <div class="range-slider">
-                <input
-                  type="range"
-                  min="0"
-                  max="220000"
-                  value="10000"
-                  class="range-input"
-                  id="range4"
-                  step="1"
-                />
-                <div class="input-color-container">
-                  <div class="input-color"></div>
-                </div>
-                <div class="sliderticks tick-1"></div>
-              </div>
-              <div class="sliderticks tick-2" style="pointer-events: all"></div>
+          <div class="d-flex mt-1 align-items-center gap-2">
+            <h2 class="mb-0 price" id="starter-price">$2,400</h2>
+            <div class="color-light-purple month-billed">
+              /month <br />
+              billed yearly
             </div>
           </div>
-
-          <div class="row mt-5 pt-3 gap-4 gap-md-0">
-            <div class="col-md-4 col-sm-12">
-              <div class="p-4 bg-white rounded color-dark-purple h-100">
-                <h4 class="color-blue">{% text "starter_title" label="Starter Title", value="Starter" %}</h4>
-                <div class="mt-2">{% text "starts_at" label="Starts At Text", value="Starts at" %}</div>
-                <div class="d-flex mt-1 align-items-center gap-2">
-                  <h2 class="mb-0 price" id="starter-price">$2,400</h2>
-                  <div class="color-light-purple month-billed">
-                    /month <br />
-                    billed yearly
-                  </div>
-                </div>
-                <div class="mt-2 equal-height">
-                  {% text "starter_description" label="Starter Description", value="For retailers of all sizes. Get started with workflow automation and get benefits from day one." %}
-                </div>
-                <button class="blue-btn mt-3 text-uppercase">
-                  {% text "get_quote_button" label="Get Quote Button", value="get a quote" %}
-                </button>
-
-                <ul class="mt-3">
-                  <li class="d-flex align-items-center gap-2">
-                    <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    <span class="fw-bold">{% text "unlimited_users_5" label="Unlimited Users Text", value="Unlimited Users" %}</span>
-                  </li>
-                  <li class="d-flex align-items-center gap-2">
-                    <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    {% text "images_video_copy" label="Images Video Copy Text", value="Images, Video & Copy" %}
-                  </li>
-                  <li class="d-flex align-items-center gap-2">
-                    <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    {% text "digital_style_guides" label="Digital Style Guides Text", value="Digital Style Guides" %}
-                  </li>
-                  <li class="d-flex align-items-center gap-2">
-                    <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    {% text "workflow_automation" label="Workflow Automation Text", value="Workflow Automation" %}
-                  </li>
-                  <li class="d-flex align-items-center gap-2">
-                    <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    {% text "metadata_enrichment" label="Metadata Enrichment Text", value="Metadata Enrichment" %}
-                  </li>
-                  <li class="d-flex align-items-center gap-2">
-                    <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    {% text "sample_management" label="Sample Management Text", value="Sample Management" %}
-                  </li>
-                  <li class="d-flex align-items-center gap-2">
-                    <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    {% text "file_automation" label="File Automation Text", value="File Automation" %}
-                  </li>
-                  <li class="d-flex align-items-center gap-2">
-                    <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    {% text "asset_hub" label="Asset Hub Text", value="Asset Hub" %}
-                  </li>
-                  <li class="d-flex align-items-center gap-2">
-                    <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    {% text "api_webhooks" label="API & Webhooks Text", value="API & Webhooks" %}
-                  </li>
-                  <li class="d-flex align-items-center gap-2">
-                    <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    {% text "all_connectors" label="All Connectors Text", value="All Connectors" %}
-                  </li>
-                  <li class="d-flex align-items-center gap-2">
-                    <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    {% text "standard_reporting" label="Standard Reporting Text", value="Standard Reporting" %}
-                  </li>
-                  <li class="d-flex align-items-center gap-2">
-                    <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    {% text "email_support" label="Email Support Text", value="Email Support" %}
-                  </li>
-                  <li class="d-flex align-items-center gap-2">
-                    <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    {% text "online_academy" label="Online Academy Text", value="Online Academy" %}
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-12">
-              <div class="p-4 bg-white rounded color-dark-purple h-100">
-                <h4 class="color-blue">{% text "core_title" label="Core Title", value="Core" %}</h4>
-                <div class="mt-2">{% text "starts_at_core" label="Starts At Core Text", value="Starts at" %}</div>
-                <div class="d-flex mt-1 align-items-center gap-2">
-                  <h2 class="mb-0 price" id="core-price">$4,100</h2>
-                  <div class="color-light-purple month-billed">
-                    /month <br />
-                    billed yearly
-                  </div>
-                </div>
-                <div class="mt-2 equal-height">
-                  {% text "core_description" label="Core Description", value="For retailers of all sizes with a need for advanced workflow automation. Take your business to the next level." %}
-                </div>
-                <button class="blue-btn mt-3 text-uppercase">
-                  {% text "get_quote_button_core" label="Get Quote Button Core", value="get a quote" %}
-                </button>
-
-                <ul class="mt-3">
-                  <li class="d-flex align-items-center gap-2">
-                    <span class="fw-bold">{% text "everything_in_starter" label="Everything in Starter Text", value="Everything in Starter +" %}</span>
-                  </li>
-                  <li class="d-flex align-items-center gap-2">
-                    <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    {% text "ai_automation" label="AI Automation Text", value="AI Automation" %}
-                  </li>
-                  <li class="d-flex align-items-center gap-2">
-                    <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    {% text "2fa_sso" label="2FA & SSO Text", value="2FA & SSO" %}
-                  </li>
-                  <li class="d-flex align-items-center gap-2">
-                    <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    {% text "data_sources" label="Data Sources Text", value="Data Sources" %}
-                  </li>
-                  <li class="d-flex align-items-center gap-2">
-                    <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    {% text "workflow_logic_alerts" label="Workflow Logic & Alerts Text", value="Workflow Logic & Alerts" %}
-                  </li>
-                  <li class="d-flex align-items-center gap-2">
-                    <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    {% text "styling_outfitting" label="Styling & Outfitting Text", value="Styling & Outfitting" %}
-                  </li>
-                  <li class="d-flex align-items-center gap-2">
-                    <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    {% text "mobile_application" label="Mobile Application Text", value="Mobile Application" %}
-                  </li>
-                  <li class="d-flex align-items-center gap-2">
-                    <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    {% text "planning_calendar" label="Planning Calendar Text", value="Planning Calendar" %}
-                  </li>
-                  <li class="d-flex align-items-center gap-2">
-                    <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    {% text "capture_one_integration" label="Capture One Integration Text", value="Capture One Integration" %}
-                  </li>
-                  <li class="d-flex align-items-center gap-2">
-                    <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    {% text "adobe_photoshop_integration" label="Adobe Photoshop Integration Text", value="Adobe Photoshop Integration" %}
-                  </li>
-                  <li class="d-flex align-items-center gap-2">
-                    <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    {% text "custom_reporting" label="Custom Reporting Text", value="Custom Reporting" %}
-                  </li>
-                  <li class="d-flex align-items-center gap-2">
-                    <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    {% text "24_5_in_app_chat_support" label="24/5 In-App Chat Support Text", value="24/5 In-App Chat Support" %}
-                  </li>
-
-                  <li class="d-flex align-items-center gap-2">
-                    <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    {% text "collection_sharing" label="Collection Sharing Text", value="Collection Sharing" %}
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-12">
-              <div class="p-4 bg-white rounded color-dark-purple h-100">
-                <h4 class="color-blue">{% text "enterprise_title" label="Enterprise Title", value="Enterprise" %}</h4>
-                <div class="d-flex mt-4 pt-2 align-items-center gap-2">
-                  <h2 class="mb-0 price">{% text "custom_price" label="Custom Price Text", value="Custom" %}</h2>
-                </div>
-                <div class="mt-2 equal-height">
-                  {% text "enterprise_description" label="Enterprise Description", value="For retailers of all sizes with a need for advanced workflow automation. Take your business to the next level." %}
-                </div>
-                <button class="blue-btn mt-3 text-uppercase">
-                  {% text "get_quote_button_enterprise" label="Get Quote Button Enterprise", value="get a quote" %}
-                </button>
-
-                <ul class="mt-3">
-                  <li class="d-flex align-items-center gap-2">
-                    <span class="fw-bold">{% text "everything_in_core" label="Everything in Core Text", value="Everything in Core +" %}</span>
-                  </li>               
-                  <li class="d-flex align-items-center gap-2">
-                    <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    {% text "unlimited_workspaces" label="Unlimited Workspaces Text", value="Unlimited Workspaces" %}
-                  </li>
-                  <li class="d-flex align-items-center gap-2">
-                    <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    {% text "talent_resourcing" label="Talent Resourcing Text", value="Talent Resourcing" %}
-                  </li>
-                  <li class="d-flex align-items-center gap-2">
-                    <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    {% text "call_sheets" label="Call Sheets Text", value="Call Sheets & Talent Booking" %}
-                  </li>
-                  <li class="d-flex align-items-center gap-2">
-                    <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    {% text "adobe_premiere" label="Adobe Premiere Text", value="Adobe Premiere Integration" %}
-                  </li>
-                  <li class="d-flex align-items-center gap-2">
-                    <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    {% text "data_analyst" label="Data Analyst Text", value="Data Analyst Access" %}
-                  </li>
-                  <li class="d-flex align-items-center gap-2">
-                    <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    {% text "dedicated_account" label="Dedicated Account Text", value="Dedicated Account Team" %}
-                  </li>
-                  <li class="d-flex align-items-center gap-2">
-                    <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    {% text "onsite_onboarding" label="Onsite Onboarding Text", value="Onsite Onboarding" %}
-                  </li>
-                  <li class="d-flex align-items-center gap-2">
-                    <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    {% text "editorial_projects" label="Editorial Projects Text", value="Editorial Projects" %}
-                  </li>
-                  <li class="d-flex align-items-center gap-2">
-                    <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    {% text "vendor_portal" label="Vendor Portal Text", value="Vendor Portal" %}
-                  </li>
-                  <li class="d-flex align-items-center gap-2">
-                    <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    {% text "integration_support" label="Integration Support Text", value="Integration Support" %}
-                  </li>
-                  <li class="d-flex align-items-center gap-2">
-                    <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    {% text "product_hub" label="Product Hub Text", value="Product Hub" %}
-                  </li>
-                  <li class="d-flex align-items-center gap-2">
-                    <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    {% text "3d_workflows" label="3D Workflows Text", value="3D Workflows" %}
-                  </li>
-                </ul>
-              </div>
-            </div>
+          <div class="mt-2 equal-height">
+            {% text "starter_description" label="Starter Description",
+            value="For retailers of all sizes. Get started with workflow
+            automation and get benefits from day one." %}
           </div>
+          <button class="blue-btn mt-3 text-uppercase">
+            {% text "get_quote_button" label="Get Quote Button", value="get a
+            quote" %}
+          </button>
 
-          <div class="mt-5 mb-3 text-center">
-            <h3 class="gap-2 d-flex align-items-center justify-content-center">
-              {% text "elevate_studio_text" label="Elevate Studio Text", value="Elevate your studio with" %}
+          <ul class="mt-3">
+            <li class="d-flex align-items-center gap-2">
               <img
-                src="{{ get_asset_url('../images/module-icons/union.svg') }}"
-                alt="union"
-                class="d-none d-md-inline"
+                src="{{ get_asset_url('../images/module-icons/tick.svg') }}"
+                alt="tick"
               />
-              {% text "ai_powered_innovations" label="AI Powered Innovations Text", value="AI-powered innovations." %}
-            </h3>
-            <img
-              src="{{ get_asset_url('../images/module-icons/union.svg') }}"
-              alt="union"
-              class="d-inline d-md-none text-center"
-            />
-          </div>
-          <p class="px-4 text-center w-75 mx-auto">
-            {% text "creative_force_description" label="Creative Force Description", value="At Creative Force, we research, test, and develop innovative AI-driven solutions that empower creative teams to transform their content production processes." %}
-          </p>
-
-          <div class="row mt-4 gap-3 gap-lg-0">
-            <div class="col-12 col-lg-6">
-              <div class="position-relative card-top h-100">
-                <img
-                  src="{{ get_asset_url('../images/woman.png') }}"
-                  alt="in-development"
-                  width="50%"
-                  class="indevelopment-img"
-                />
-                <span class="badge live">live</span>
-                <div
-                  class="pt-4 pe-2 d-flex flex-column justify-content-center card-desc"
-                >
-                  <h4>{% text "ecommerce_copywriting_title" label="E-Commerce Copywriting Title", value="E-Commerce Copywriting" %}</h4>
-                  <p>
-                    {% text "ecommerce_copywriting_desc" label="E-Commerce Copywriting Description", value="Supercharge copy production with our multidimensional AI copywriter." %}
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-lg-6">
-              <div class="position-relative card-top h-100">
-                <div class="position-relative work-group-container">
-                  <img
-                    src="{{ get_asset_url('../images/work-group-img.svg') }}"
-                    height="100%"
-                    alt="work-group"
-                    class="work-group-img"
-                  />
-                  <img
-                    src="{{ get_asset_url('../images/work-group-arrow.svg') }}"
-                    alt="work-group-arrow"
-                    class="work-group-arrow-img"
-                    height="100%"
-                    width="60%"
-                  />
-                </div>
-                <span class="badge live">live</span>
-                <div
-                  class="pt-4 pe-2 d-flex flex-column justify-content-center card-desc"
-                >
-                  <h4>{% text "workflow_title" label="Workflow Title", value="Workflow" %}</h4>
-                  <p>
-                    {% text "workflow_desc" label="Workflow Description", value="Build flexible, custom workflows that integrate with the most advancedAI services available." %}
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row mt-4 gap-3 gap-lg-0">
-            <div class="col-12 col-lg-4">
-              <div class="position-relative card-top overflow-hidden h-100">
-                <img
-                  src="{{ get_asset_url('../images/in-development-1.png') }}"
-                  alt="in-development"
-                  width="40%"
-                  height="100%"
-                  class="indevelopment-img"
-                />
-                <span class="badge in-development">in development</span>
-                <div
-                  class="pt-5 pe-2 ps-4 d-flex flex-column justify-content-center card-desc"
-                >
-                  <h4>{% text "garment_labels_title" label="Garment Labels Title", value="Garment Labels" %}</h4>
-                  <p>
-                    {% text "garment_labels_desc" label="Garment Labels Description", value="Convert garment label information into digital data during sample check-in." %}
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-lg-4">
-              <div class="position-relative card-top overflow-hidden h-100">
-                <img
-                  src="{{ get_asset_url('../images/in-development-2.png') }}"
-                  alt="in-development"
-                  width="40%"
-                  height="100%"
-                  class="indevelopment-img"
-                />
-                <span class="badge in-development">in development</span>
-                <div
-                  class="pt-5 pe-2 ps-4 d-flex flex-column justify-content-center card-desc"
-                >
-                  <h4>{% text "digital_models_title" label="Digital Models Title", value="Digital Models" %}</h4>
-                  <p>
-                    {% text "digital_models_desc" label="Digital Models Description", value="Increase image variety with advanced digital models." %}
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-lg-4">
-              <div class="position-relative card-top overflow-hidden h-100">
-                <img
-                  src="{{ get_asset_url('../images/in-development-3.png') }}"
-                  alt="in-development"
-                  width="40%"
-                  height="100%"
-                  class="indevelopment-img"
-                />
-                <span class="badge in-development">in development</span>
-                <div
-                  class="pt-5 pe-2 ps-4 d-flex flex-column justify-content-center card-desc"
-                >
-                  <h4>{% text "color_variations_title" label="Color Variations Title", value="Color Variations" %}</h4>
-                  <p>
-                    {% text "color_variations_desc" label="Color Variations Description", value="Produce accurate and consistent color variations." %}
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="unlock-new py-5 position-relative overflow-hidden">
-        <div class="container d-flex align-items-center text-center flex-column py-3 px-5">
-          <h2>{% text "unlock_possibilities_title" label="Unlock Possibilities Title", value="Unlock new possibilities with custom studio add-ons." %}</h2>
-          <p class="w-75 text-center">
-          {% text "unlock_possibilities_desc" label="Unlock Possibilities Description", value="Streamline workflows with powerful extensions tailored to enhance vendor collaboration and editorial projects, ensuring a seamless content production experience." %}
-        </p>
-        <div
-          class="mt-4 px-4 rounded w-100 overflow-hidden position-relative unlock-new-card-top unlock-new-card"
-        >
-          <div class="row">
-            <div
-              class="col-4 d-flex justify-content-center d-none d-lg-block"
-            >
-              <div class="d-flex gap-2 position-absolute mansory-container">
-                <div class="d-flex flex-column gap-2">
-                  <img src="{{ get_asset_url('../images/mansory-1.png') }}" alt="Image 1" />
-                  <img src="{{ get_asset_url('../images/mansory-1.png') }}" alt="Image 2" />
-                  <img src="{{ get_asset_url('../images/mansory-1.png') }}" alt="Image 3" />
-                </div>
-                <div class="d-flex flex-column gap-2 mt-5 pt-4">
-                  <img src="{{ get_asset_url('../images/mansory-1.png') }}" alt="Image 4" />
-                  <img src="{{ get_asset_url('../images/mansory-1.png') }}" alt="Image 5" />
-                  <img src="{{ get_asset_url('../images/mansory-1.png') }}" alt="Image 6" />
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-lg-8">
-              <div
-                class="w-75 px-3 py-5 color-dark-purple justify-content-center d-flex flex-column h-100 align-items-lg-start align-items-center"
+              <span class="fw-bold"
+                >{% text "unlimited_users_5" label="Unlimited Users Text",
+                value="Unlimited Users" %}</span
               >
-                <h4>{% text "vendor_content_title" label="Vendor Content Title", value="Vendor-provided content extension" %}</h4>
-                <p>
-                  {% text "vendor_content_desc" label="Vendor Content Description", value="Streamline your workflow by managing vendor-provided assets from initial request to final upload, ensuring consistency and efficiency at every step." %}
-                </p>
-                <ul class="mt-3">
-                  <li class="mt-1 d-flex align-items-center gap-1">
-                    <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" class="me-1" />
-                    {% text "upload_portal" label="Upload Portal Text", value="Upload directly in the portal" %}
-                  </li>
-                  <li class="mt-1 d-flex align-items-center gap-1">
-                    <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" class="me-1" />
-                    {% text "track_unique_image_request_ids" label="Track Unique Image Request IDs Text", value="Track unique image request IDs" %}
-                  </li>
-                  <li class="mt-1 d-flex align-items-center gap-1">
-                    <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" class="me-1" />
-                    {% text "visual_style_guides_and_standards" label="Visual Style Guides and Standards Text", value="Visual style guides and standards" %}
-                  </li>
-                  <li class="mt-1 d-flex align-items-center gap-1">
-                    <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" class="me-1" />
-                    {% text "approvals_for_faster_turnaround" label="Approvals for Faster Turnaround Text", value="Approvals for faster turnaround" %}
-                  </li>
-                </ul>
-                <button class="blue-btn readmore-btn mt-3">read more</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="add-on">add-on</div>
-          <img
-            src="{{ get_asset_url('../images/unlock-new-bottom-right-1.png') }}"
-            alt=""
-            class="unlock-new-bottom-right-img d-none d-xl-block"
-          />
-        </div>
-
-        <div
-          class="mt-4 px-4 rounded w-100 overflow-hidden position-relative unlock-new-card-bottom unlock-new-card"
-        >
-          <div class="row">
-            <div
-              class="col-4 d-flex justify-content-center d-none d-lg-block"
-            >
+            </li>
+            <li class="d-flex align-items-center gap-2">
               <img
-                src="{{ get_asset_url('../images/editorial-1.png') }}"
-                alt=""
-                class="position-absolute editorial-1-img"
-                height="100%"
+                src="{{ get_asset_url('../images/module-icons/tick.svg') }}"
+                alt="tick"
               />
-            </div>
-            <div class="col-12 col-lg-8 z-1">
-              <div
-                class="w-75 px-3 py-5 color-dark-purple justify-content-center d-flex flex-column h-100 align-items-lg-start align-items-center"
-              >
-                <h4>Editorial projects extension</h4>
-                <p>
-                  Control every step of your editorial projects with ease —
-                  from planning and content creation to final approvals —
-                  ensuring teams stay aligned and projects run smoothly.
-                </p>
-                <ul class="mt-3">
-                <li class="mt-1 d-flex align-items-center gap-1">
-                    <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" class="me-1" />
-                    {% text "centralized_editorial_assets" label="Centralized Editorial Assets Text", value="Centralized editorial assets" %}
-                  </li>
-                  <li class="mt-1 d-flex align-items-center gap-1">
-                    <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" class="me-1" />
-                    {% text "collaborate_in_real_time" label="Collaborate in Real-Time Text", value="Collaborate in real-time" %}
-                  </li>
-                  <li class="mt-1 d-flex align-items-center gap-1">
-                    <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" class="me-1" />
-                    {% text "track_progress_and_milestones" label="Track Progress and Milestones Text", value="Track progress and milestones" %}
-                  </li>
-                  <li class="mt-1 d-flex align-items-center gap-1">
-                    <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" class="me-1" />
-                    {% text "integrate_visual_guides" label="Integrate Visual Guides Text", value="Integrate visual guides" %}
-                  </li>
-                </ul>
-                <button class="blue-btn readmore-btn mt-3">read more</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="add-on">add-on</div>
-          <img
-            src="{{ get_asset_url('../images/unlock-new-bottom-right-2.png') }}"
-            alt=""
-            class="unlock-new-bottom-right-img d-none d-xl-block"
-          />
+              {% text "images_video_copy" label="Images Video Copy Text",
+              value="Images, Video & Copy" %}
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <img
+                src="{{ get_asset_url('../images/module-icons/tick.svg') }}"
+                alt="tick"
+              />
+              {% text "digital_style_guides" label="Digital Style Guides Text",
+              value="Digital Style Guides" %}
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <img
+                src="{{ get_asset_url('../images/module-icons/tick.svg') }}"
+                alt="tick"
+              />
+              {% text "workflow_automation" label="Workflow Automation Text",
+              value="Workflow Automation" %}
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <img
+                src="{{ get_asset_url('../images/module-icons/tick.svg') }}"
+                alt="tick"
+              />
+              {% text "metadata_enrichment" label="Metadata Enrichment Text",
+              value="Metadata Enrichment" %}
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <img
+                src="{{ get_asset_url('../images/module-icons/tick.svg') }}"
+                alt="tick"
+              />
+              {% text "sample_management" label="Sample Management Text",
+              value="Sample Management" %}
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <img
+                src="{{ get_asset_url('../images/module-icons/tick.svg') }}"
+                alt="tick"
+              />
+              {% text "file_automation" label="File Automation Text",
+              value="File Automation" %}
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <img
+                src="{{ get_asset_url('../images/module-icons/tick.svg') }}"
+                alt="tick"
+              />
+              {% text "asset_hub" label="Asset Hub Text", value="Asset Hub" %}
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <img
+                src="{{ get_asset_url('../images/module-icons/tick.svg') }}"
+                alt="tick"
+              />
+              {% text "api_webhooks" label="API & Webhooks Text", value="API &
+              Webhooks" %}
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <img
+                src="{{ get_asset_url('../images/module-icons/tick.svg') }}"
+                alt="tick"
+              />
+              {% text "all_connectors" label="All Connectors Text", value="All
+              Connectors" %}
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <img
+                src="{{ get_asset_url('../images/module-icons/tick.svg') }}"
+                alt="tick"
+              />
+              {% text "standard_reporting" label="Standard Reporting Text",
+              value="Standard Reporting" %}
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <img
+                src="{{ get_asset_url('../images/module-icons/tick.svg') }}"
+                alt="tick"
+              />
+              {% text "email_support" label="Email Support Text", value="Email
+              Support" %}
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <img
+                src="{{ get_asset_url('../images/module-icons/tick.svg') }}"
+                alt="tick"
+              />
+              {% text "online_academy" label="Online Academy Text",
+              value="Online Academy" %}
+            </li>
+          </ul>
         </div>
       </div>
+      <div class="col-md-4 col-sm-12">
+        <div class="p-4 bg-white rounded color-dark-purple h-100">
+          <h4 class="color-blue">
+            {% text "core_title" label="Core Title", value="Core" %}
+          </h4>
+          <div class="mt-2">
+            {% text "starts_at_core" label="Starts At Core Text", value="Starts
+            at" %}
+          </div>
+          <div class="d-flex mt-1 align-items-center gap-2">
+            <h2 class="mb-0 price" id="core-price">$4,100</h2>
+            <div class="color-light-purple month-billed">
+              /month <br />
+              billed yearly
+            </div>
+          </div>
+          <div class="mt-2 equal-height">
+            {% text "core_description" label="Core Description", value="For
+            retailers of all sizes with a need for advanced workflow automation.
+            Take your business to the next level." %}
+          </div>
+          <button class="blue-btn mt-3 text-uppercase">
+            {% text "get_quote_button_core" label="Get Quote Button Core",
+            value="get a quote" %}
+          </button>
 
+          <ul class="mt-3">
+            <li class="d-flex align-items-center gap-2">
+              <span class="fw-bold"
+                >{% text "everything_in_starter" label="Everything in Starter
+                Text", value="Everything in Starter +" %}</span
+              >
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <img
+                src="{{ get_asset_url('../images/module-icons/tick.svg') }}"
+                alt="tick"
+              />
+              {% text "ai_automation" label="AI Automation Text", value="AI
+              Automation" %}
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <img
+                src="{{ get_asset_url('../images/module-icons/tick.svg') }}"
+                alt="tick"
+              />
+              {% text "2fa_sso" label="2FA & SSO Text", value="2FA & SSO" %}
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <img
+                src="{{ get_asset_url('../images/module-icons/tick.svg') }}"
+                alt="tick"
+              />
+              {% text "data_sources" label="Data Sources Text", value="Data
+              Sources" %}
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <img
+                src="{{ get_asset_url('../images/module-icons/tick.svg') }}"
+                alt="tick"
+              />
+              {% text "workflow_logic_alerts" label="Workflow Logic & Alerts
+              Text", value="Workflow Logic & Alerts" %}
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <img
+                src="{{ get_asset_url('../images/module-icons/tick.svg') }}"
+                alt="tick"
+              />
+              {% text "styling_outfitting" label="Styling & Outfitting Text",
+              value="Styling & Outfitting" %}
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <img
+                src="{{ get_asset_url('../images/module-icons/tick.svg') }}"
+                alt="tick"
+              />
+              {% text "mobile_application" label="Mobile Application Text",
+              value="Mobile Application" %}
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <img
+                src="{{ get_asset_url('../images/module-icons/tick.svg') }}"
+                alt="tick"
+              />
+              {% text "planning_calendar" label="Planning Calendar Text",
+              value="Planning Calendar" %}
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <img
+                src="{{ get_asset_url('../images/module-icons/tick.svg') }}"
+                alt="tick"
+              />
+              {% text "capture_one_integration" label="Capture One Integration
+              Text", value="Capture One Integration" %}
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <img
+                src="{{ get_asset_url('../images/module-icons/tick.svg') }}"
+                alt="tick"
+              />
+              {% text "adobe_photoshop_integration" label="Adobe Photoshop
+              Integration Text", value="Adobe Photoshop Integration" %}
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <img
+                src="{{ get_asset_url('../images/module-icons/tick.svg') }}"
+                alt="tick"
+              />
+              {% text "custom_reporting" label="Custom Reporting Text",
+              value="Custom Reporting" %}
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <img
+                src="{{ get_asset_url('../images/module-icons/tick.svg') }}"
+                alt="tick"
+              />
+              {% text "24_5_in_app_chat_support" label="24/5 In-App Chat Support
+              Text", value="24/5 In-App Chat Support" %}
+            </li>
+
+            <li class="d-flex align-items-center gap-2">
+              <img
+                src="{{ get_asset_url('../images/module-icons/tick.svg') }}"
+                alt="tick"
+              />
+              {% text "collection_sharing" label="Collection Sharing Text",
+              value="Collection Sharing" %}
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-12">
+        <div class="p-4 bg-white rounded color-dark-purple h-100">
+          <h4 class="color-blue">
+            {% text "enterprise_title" label="Enterprise Title",
+            value="Enterprise" %}
+          </h4>
+          <div class="d-flex mt-4 pt-2 align-items-center gap-2">
+            <h2 class="mb-0 price">
+              {% text "custom_price" label="Custom Price Text", value="Custom"
+              %}
+            </h2>
+          </div>
+          <div class="mt-2 equal-height">
+            {% text "enterprise_description" label="Enterprise Description",
+            value="For retailers of all sizes with a need for advanced workflow
+            automation. Take your business to the next level." %}
+          </div>
+          <button class="blue-btn mt-3 text-uppercase">
+            {% text "get_quote_button_enterprise" label="Get Quote Button
+            Enterprise", value="get a quote" %}
+          </button>
+
+          <ul class="mt-3">
+            <li class="d-flex align-items-center gap-2">
+              <span class="fw-bold"
+                >{% text "everything_in_core" label="Everything in Core Text",
+                value="Everything in Core +" %}</span
+              >
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <img
+                src="{{ get_asset_url('../images/module-icons/tick.svg') }}"
+                alt="tick"
+              />
+              {% text "unlimited_workspaces" label="Unlimited Workspaces Text",
+              value="Unlimited Workspaces" %}
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <img
+                src="{{ get_asset_url('../images/module-icons/tick.svg') }}"
+                alt="tick"
+              />
+              {% text "talent_resourcing" label="Talent Resourcing Text",
+              value="Talent Resourcing" %}
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <img
+                src="{{ get_asset_url('../images/module-icons/tick.svg') }}"
+                alt="tick"
+              />
+              {% text "call_sheets" label="Call Sheets Text", value="Call Sheets
+              & Talent Booking" %}
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <img
+                src="{{ get_asset_url('../images/module-icons/tick.svg') }}"
+                alt="tick"
+              />
+              {% text "adobe_premiere" label="Adobe Premiere Text", value="Adobe
+              Premiere Integration" %}
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <img
+                src="{{ get_asset_url('../images/module-icons/tick.svg') }}"
+                alt="tick"
+              />
+              {% text "data_analyst" label="Data Analyst Text", value="Data
+              Analyst Access" %}
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <img
+                src="{{ get_asset_url('../images/module-icons/tick.svg') }}"
+                alt="tick"
+              />
+              {% text "dedicated_account" label="Dedicated Account Text",
+              value="Dedicated Account Team" %}
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <img
+                src="{{ get_asset_url('../images/module-icons/tick.svg') }}"
+                alt="tick"
+              />
+              {% text "onsite_onboarding" label="Onsite Onboarding Text",
+              value="Onsite Onboarding" %}
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <img
+                src="{{ get_asset_url('../images/module-icons/tick.svg') }}"
+                alt="tick"
+              />
+              {% text "editorial_projects" label="Editorial Projects Text",
+              value="Editorial Projects" %}
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <img
+                src="{{ get_asset_url('../images/module-icons/tick.svg') }}"
+                alt="tick"
+              />
+              {% text "vendor_portal" label="Vendor Portal Text", value="Vendor
+              Portal" %}
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <img
+                src="{{ get_asset_url('../images/module-icons/tick.svg') }}"
+                alt="tick"
+              />
+              {% text "integration_support" label="Integration Support Text",
+              value="Integration Support" %}
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <img
+                src="{{ get_asset_url('../images/module-icons/tick.svg') }}"
+                alt="tick"
+              />
+              {% text "product_hub" label="Product Hub Text", value="Product
+              Hub" %}
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <img
+                src="{{ get_asset_url('../images/module-icons/tick.svg') }}"
+                alt="tick"
+              />
+              {% text "3d_workflows" label="3D Workflows Text", value="3D
+              Workflows" %}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-5 mb-3 text-center">
+      <h3 class="gap-2 d-flex align-items-center justify-content-center">
+        {% text "elevate_studio_text" label="Elevate Studio Text",
+        value="Elevate your studio with" %}
+        <img
+          src="{{ get_asset_url('../images/module-icons/union.svg') }}"
+          alt="union"
+          class="d-none d-md-inline"
+        />
+        {% text "ai_powered_innovations" label="AI Powered Innovations Text",
+        value="AI-powered innovations." %}
+      </h3>
       <img
-        src="{{ get_asset_url('../images/ellipse-bg.svg') }}"
-        alt="ellipse-bg"
-        class="ellipse-bg-img"
+        src="{{ get_asset_url('../images/module-icons/union.svg') }}"
+        alt="union"
+        class="d-inline d-md-none text-center"
       />
-    </section>
-    <section class="compare-plans bg-blue py-3 py-lg-4 text-white">
-    <div class="container">
-      <div class="row px-4 px-sm-0">
-        <div
-          class="col-12 col-lg-5 d-flex flex-column justify-content-center"
-        >
-          <h2>{% text "compare_plans_title" label="Compare Plans Title", value="Compare plans" %}</h2>
-          <div class="d-flex text-uppercase gap-3 fs-7 mt-2">
-            <div class="key-features">{% text "compare_plans_key_features" label="Compare Plans Key Features", value="Key features" %}</div>
-            <u class="all-features">{% text "compare_plans_all_features" label="Compare Plans All Features", value="all features" %}</u>
-          </div>
-        </div>
-        <div class="col-12 col-lg-7 mt-lg-0 mt-3">
-          <div class="row">
-            <div
-              class="col-12 col-sm-4 d-flex d-sm-block align-items-baseline gap-3"
-            >
-              <div class="fs-7">{% text "compare_plans_starter" label="Compare Plans Starter", value="Starter" %}</div>
-              <div class="h5 mt-1 ms-auto" id="compare-starter-price"></div>
-              <button class="white-btn fs-7">{% text "compare_plans_get_a_quote_1" label="Compare Plans Get A Quote", value="get a quote" %}</button>
-            </div>
-            <div
-              class="col-12 col-sm-4 d-flex d-sm-block align-items-baseline mt-2 mt-sm-0 gap-3"
-            >
-              <div class="fs-7">{% text "compare_plans_core" label="Compare Plans Core", value="Core" %}</div>
-              <div class="h5 mt-1 ms-auto" id="compare-core-price"></div>
-              <button class="white-btn fs-7">{% text "compare_plans_get_a_quote_2" label="Compare Plans Get A Quote", value="get a quote" %}</button>
-            </div>
-            <div
-              class="col-12 col-sm-4 d-flex d-sm-block align-items-baseline mt-2 mt-sm-0 gap-3"
-            >
-              <div class="fs-7">{% text "compare_plans_enterprise" label="Compare Plans Enterprise", value="Enterprise" %}</div>
-              <div class="h5 mt-1 ms-auto">{% text "compare_plans_custom" label="Compare Plans Custom", value="Custom" %}</div>
-              <button class="white-btn fs-7">{% text "compare_plans_get_a_quote_3" label="Compare Plans Get A Quote", value="get a quote" %}</button>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
-  </section>
+    <p class="px-4 text-center w-75 mx-auto">
+      {% text "creative_force_description" label="Creative Force Description",
+      value="At Creative Force, we research, test, and develop innovative
+      AI-driven solutions that empower creative teams to transform their content
+      production processes." %}
+    </p>
 
-  <section class="creative pt-5 position-relative pb-4">
-    <div
-      class="container color-dark-purple color-dark-purple position-relative"
-    >
-      <h2>{% text "creative_force_cloud_title" label="Creative Force Cloud Title", value="Creative Force Cloud." %}</h2>
-      <p>
-        {% text "creative_force_cloud_desc" label="Creative Force Cloud Description", value="Scalable, secure, and built for seamless collaboration across unlimited users and clients." %}
-      </p>
-      <table class="table table-bordered mt-4">
-        <colgroup>
-          <!-- 5/12 -->
-          <col style="width: 41.67%" />
-          <!-- 7/12 divided equally -->
-          <col style="width: 19.44%" />
-          <col style="width: 19.44%" id="col-3" />
-          <col style="width: 19.44%" />
-        </colgroup>
-        <tbody>
-          <tr>
-            <td class="d-flex align-items-center gap-2">
-              User <img src="{{ get_asset_url('../images/module-icons/info.svg') }}" class="opacity-25" />
-            </td>
-            <td>{% text "unlimited_users_1" label="Unlimited Users Text 1", value="Unlimited" %}</td>
-            <td>{% text "unlimited_users_2" label="Unlimited Users Text 2", value="Unlimited" %}</td>
-            <td>{% text "unlimited_users_3" label="Unlimited Users Text 3", value="Unlimited" %}</td>
-          </tr>
-          <tr>
-            <td class="d-flex align-items-center gap-2">
-              {% text "workspaces_clients" label="Workspaces (Clients) Text", value="Workspaces (Clients)" %}
-              <img src="{{ get_asset_url('../images/module-icons/info.svg') }}" class="opacity-25" />
-            </td>
-            <td>{% text "one" label="One Text", value="1" %}</td>
-            <td>{% text "three" label="Three Text", value="3" %}</td>
-            <td>{% text "unlimited_users_4" label="Unlimited Users Text 4", value="Unlimited" %}</td>
-          </tr>
-          <tr>
-            <td class="d-flex align-items-center gap-2">
-              {% text "additional_workspaces" label="Additional Workspaces Text", value="Additional Workspaces" %}
-              <img src="{{ get_asset_url('../images/module-icons/info.svg') }}" class="opacity-25" />
-            </td>
-            <td></td>
-            <td></td>
-            <td>$</td>
-          </tr>
-          <tr>
-            <td>{% text "cloud_based" label="Cloud Based Text", value="Cloud Based" %}</td>
-            <td><img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" /></td>
-            <td><img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" /></td>
-            <td><img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" /></td>
-          </tr>
-          <tr>
-            <td>{% text "multi_tenant_database" label="Multi-Tenant Database Text", value="Multi-Tenant Database" %}</td>
-            <td><img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" /></td>
-            <td><img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" /></td>
-            <td><img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" /></td>
-          </tr>
-          <tr>
-            <td>{% text "regional_multi_tenant_binary_storage" label="Regional Multi-Tenant Binary Storage Text", value="Regional Multi-Tenant Binary Storage" %}</td>
-            <td><img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" /></td>
-            <td><img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" /></td>
-            <td><img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" /></td>
-          </tr>
-          <tr>
-            <td>{% text "full_redundant_back_up" label="Full Redundant Back-up Text", value="Full Redundant Back-up" %}</td>
-            <td></td>
-            <td>$</td>
-            <td>$</td>
-          </tr>
-          <tr>
-            <td>{% text "dedicated_database" label="Dedicated Database Text", value="Dedicated Database" %}</td>
-            <td></td>
-            <td></td>
-            <td>$</td>
-          </tr>
-          <tr>
-            <td>{% text "dedicated_binary_storage" label="Dedicated Binary Storage Text", value="Dedicated Binary Storage" %}</td>
-            <td></td>
-            <td></td>
-            <td>$</td>
-          </tr>
-          <tr>
-            <td>{% text "api" label="API Text", value="API" %}</td>
-            <td><img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" /></td>
-            <td><img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" /></td>
-            <td><img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" /></td>
-          </tr>
-          <tr>
-            <td>{% text "webhooks" label="Webhooks Text", value="Webhooks" %}</td>
-            <td><img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" /></td>
-            <td><img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" /></td>
-            <td><img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" /></td>
-          </tr>
-          <tr>
-            <td>{% text "file_automation" label="File Automation Text", value="File Automation" %}</td>
-            <td><img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" /></td>
-            <td><img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" /></td>
-            <td><img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" /></td>
-          </tr>
-          <tr>
-            <td>{% text "ftp_server_10_gb" label="FTP Server (10 Gb) Text", value="FTP Server(10 Gb)" %}</td>
-            <td></td>
-            <td><img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" /></td>
-            <td><img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" /></td>
-          </tr>
-          <tr>
-            <td>{% text "api" label="API Text", value="API" %}</td>
-            <td><img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" /></td>
-            <td><img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" /></td>
-            <td><img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" /></td>
-          </tr>
-          <tr>
-            <td>{% text "api" label="API Text", value="API" %}</td>
-            <td><img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" /></td>
-            <td><img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" /></td>
-            <td><img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" /></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="creative-overlay"></div>
-    <div class="col-3-overlay"></div>
-    <div class="show-all-overlay"></div>
-    <div
-      class="position-absolute show-all fw-semibold text-center w-100 text-decoration-underline"
-    >
-      {% text "show_all" label="Show All Text", value="Show all" %}
-    </div>
-  </section>
-
-  <section
-        class="trusted-by py-5 position-relative overflow-hidden bg-light-purple"
-      >
-        <div class="container color-dark-purple text-center">
-          <h1>{% text "trusted_by_title" label="Trusted By Title", value="Trusted by industry leaders." %}</h1>
-          <p class="mt-4 mb-5 pb-3">
-            {% text "trusted_by_description" label="Trusted By Description", value="See how creative force empowers brands to achieve faster results, increase productivity, and streamline their creative processes." %}
-          </p>
-
-          <div class="row">
-            <div class="col-md-8 col-12">
-              <div class="row">
-                <div class="col-8">
-                  <div class="h-100 trusted-card p-lg-5 p-md-4 p-3 rounded text-center">
-                    <p>
-                      Decreased photographer onboarding time from 1 day to 20
-                      minutes
-                    </p>
-                    <u class="text-uppercase fs-7 fw-semibold">
-                      boohoo case study
-                    </u>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <div class="h-100 trusted-card p-lg-5 p-md-4 p-3 rounded text-center">
-                    <p>MACH Certified</p>
-                    <img src="{{ get_asset_url('../images/mach.png') }}" width="100%" />
-                  </div>
-                </div>
-                <div class="col-6 mt-4">
-                  <div class="trusted-card p-lg-5 pt-lg-4 p-md-4 p-3 mb-3 rounded text-center">
-                    <div class="big-3x">3x</div>
-                    <p class="fw-semibold">
-                      More marketing projects completed per year
-                    </p>
-                    <u class="text-uppercase fs-7 fw-semibold">
-                      sanmar case study
-                    </u>
-                  </div>
-
-                  <div class="trusted-card p-lg-5 p-md-4 p-3 rounded text-center">
-                    <img src="{{ get_asset_url('../images/module-icons/g2.svg') }}" alt="G2" />
-                    <p class="mt-2 fw-semibold">
-                      "Creative Force isn't just software; it's a partnership
-                      with a shared goal of creating efficiencies within
-                      workflows."
-                    </p>
-                    <p class="fw-semibold text-uppercase fs-7 mt-3 mb-0">
-                      Michelle M.
-                    </p>
-                    <p class="fs-7 mb-0">
-                      Director, Creative & Photo Studio Operations
-                    </p>
-                    <img src="{{ get_asset_url('../images/module-icons/stars.svg') }}" alt="" />
-                  </div>
-                </div>
-                <div class="col-6 mt-4">
-                  <div class="trusted-card p-lg-5 p-md-4 p-3 pb-4 rounded text-center">
-                    <p class="fw-semibold">
-                      "Implementing Creative Force reduced a large amount of
-                      unnecessary admin work which has improved efficiency and
-                      lowered potential reshoots, which is a large cost- and
-                      time-saver."
-                    </p>
-                    <p class="mt-3 fs-7 mb-1">
-                      <span class="fw-semibold">Joel Pammenter</span> — Senior
-                      Photographer
-                    </p>
-                    <img src="{{ get_asset_url('../images/module-icons/boohoo.svg') }}" alt="" class="mb-4" />
-                  </div>
-                  <div class="trusted-card mt-5 px-3 pt-3 rounded text-center">
-                    <img
-                      src="{{ get_asset_url('../images/higher-performer.png') }}"
-                      width="100%"
-                      alt=""
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 col-12">
-              <div class="trusted-card p-lg-5 p-md-4 p-3 pb-4 rounded text-center">
-                <p>
-                  "We can just come in, get into the flow, get into the groove.
-                  We pass our files off just like everyone else does. But all
-                  that little painstaking, not fun stuff, is handled by the
-                  program."
-                </p>
-                <p class="mt-3 fs-7 mb-1">
-                  <span class="fw-semibold">Anthony nocella </span> — Lead
-                  Photographer
-                </p>
-                <img src="{{ get_asset_url('../images/module-icons/nuuly.svg') }}" alt="" class="mb-5" />
-              </div>
-              <div class="trusted-card p-lg-5 p-md-4 p-3 pb-4 rounded text-center">
-                <div
-                  class="d-flex align-items-center justify-content-around flex-wrap"
-                >
-                  <img src="{{ get_asset_url('../images/module-icons/g2.svg') }}" alt="" width="35px" />
-                  <img src="{{ get_asset_url('../images/module-icons/star.png') }}" alt="" />
-                  <div class="mt-3 mt-xxl-0">
-                    <span class="fw-semibold">4.7</span>
-                    out of
-                    <span class="fw-semibold">5</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="trusted-card mt-4 mb-4 px-5 pb-5 rounded text-center">
-                <div class="big-3x">82%</div>
-                <p class="mt-2 fs-5 fw-semibold">Faster turnaround time</p>
-                <p
-                  class="text-uppercase fs-7 fw-semibold pb-5 text-decoration-underline"
-                >
-                  Orendt studios case study
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="list-trusted row mt-0 mt-lg-4">
-            <div
-              class="col-xl-2 col-lg-4 col-sm-6 col-12 d-flex align-items-center justify-content-center"
-            >
-              <img src="{{ get_asset_url('../images/trusted-1.svg') }}" alt="" />
-            </div>
-            <div
-              class="col-xl-2 col-lg-4 col-sm-6 col-12 d-flex align-items-center justify-content-center"
-            >
-              <img src="{{ get_asset_url('../images/trusted-2.svg') }}" alt="" />
-            </div>
-            <div
-              class="col-xl-2 col-lg-4 col-sm-6 col-12 d-flex align-items-center justify-content-center"
-            >
-              <img src="{{ get_asset_url('../images/trusted-3.svg') }}" alt="" />
-            </div>
-            <div
-              class="col-xl-2 col-lg-4 col-sm-6 col-12 d-flex align-items-center justify-content-center"
-            >
-              <img src="{{ get_asset_url('../images/trusted-4.svg') }}" alt="" />
-            </div>
-            <div
-              class="col-xl-2 col-lg-4 col-sm-6 col-12 d-flex align-items-center justify-content-center"
-            >
-              <img src="{{ get_asset_url('../images/trusted-5.svg') }}" alt="" />
-            </div>
-            <div
-              class="col-xl-2 col-lg-4 col-sm-6 col-12 d-flex align-items-center justify-content-center"
-            >
-              <img src="{{ get_asset_url('../images/trusted-6.svg') }}" alt="" />
-            </div>
-          </div>
-        </div>
-
-        <img src="{{ get_asset_url('../images/trustedby-overlay.svg') }}" class="trustedby-img" />
-      </section>
-
-      <section class="security-compliance bg-purple">
-      <div class="container py-5 px-3 color-dark-purple">
-        <div class="row">
-          <div class="col-lg-6 col-12">
-            <h2>{% text "security_compliance_title" label="Security Compliance Title", value="Security & Compliance." %}</h2>
-            <p class="fw-semibold mt-3">
-              {% text "security_compliance_desc" label="Security Compliance Description", value="Built to meet the highest standards of data protection and regulatory compliance. Our robust infrastructure includes advanced encryption protocols, ensuring your data remains secure and fully compliant at all times." %}
+    <div class="row mt-4 gap-3 gap-lg-0">
+      <div class="col-12 col-lg-6">
+        <div class="position-relative card-top h-100">
+          <img
+            src="{{ get_asset_url('../images/woman.png') }}"
+            alt="in-development"
+            width="50%"
+            class="indevelopment-img"
+          />
+          <span class="badge live">live</span>
+          <div
+            class="pt-4 pe-2 d-flex flex-column justify-content-center card-desc"
+          >
+            <h4>
+              {% text "ecommerce_copywriting_title" label="E-Commerce
+              Copywriting Title", value="E-Commerce Copywriting" %}
+            </h4>
+            <p>
+              {% text "ecommerce_copywriting_desc" label="E-Commerce Copywriting
+              Description", value="Supercharge copy production with our
+              multidimensional AI copywriter." %}
             </p>
           </div>
-          <div class="col-lg-6 col-12 mt-3 mt-lg-0">
-            <div class="d-flex gap-3 justify-content-around">
-              <button
-                class="security-btn w-50 d-flex align-items-center gap-3 px-4 py-3"
-              >
-                <img src="{{ get_asset_url('../images/module-icons/security-1.svg') }}" alt="" />
-                <span class="fw-bold">SOC 2 Type II</span>
-              </button>
-              <button
-                class="security-btn w-50 d-flex align-items-center gap-3 px-4 py-3"
-              >
-                <img src="{{ get_asset_url('../images/module-icons/security-2.svg') }}" alt="" />
-                <span class="fw-bold">256-bit Encryption</span>
-              </button>
+        </div>
+      </div>
+      <div class="col-12 col-lg-6">
+        <div class="position-relative card-top h-100">
+          <div class="position-relative work-group-container">
+            <img
+              src="{{ get_asset_url('../images/work-group-img.svg') }}"
+              height="100%"
+              alt="work-group"
+              class="work-group-img"
+            />
+            <img
+              src="{{ get_asset_url('../images/work-group-arrow.svg') }}"
+              alt="work-group-arrow"
+              class="work-group-arrow-img"
+              height="100%"
+              width="60%"
+            />
+          </div>
+          <span class="badge live">live</span>
+          <div
+            class="pt-4 pe-2 d-flex flex-column justify-content-center card-desc"
+          >
+            <h4>
+              {% text "workflow_title" label="Workflow Title", value="Workflow"
+              %}
+            </h4>
+            <p>
+              {% text "workflow_desc" label="Workflow Description", value="Build
+              flexible, custom workflows that integrate with the most advancedAI
+              services available." %}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-4 gap-3 gap-lg-0">
+      <div class="col-12 col-lg-4">
+        <div class="position-relative card-top overflow-hidden h-100">
+          <img
+            src="{{ get_asset_url('../images/in-development-1.png') }}"
+            alt="in-development"
+            width="40%"
+            height="100%"
+            class="indevelopment-img"
+          />
+          <span class="badge in-development">in development</span>
+          <div
+            class="pt-5 pe-2 ps-4 d-flex flex-column justify-content-center card-desc"
+          >
+            <h4>
+              {% text "garment_labels_title" label="Garment Labels Title",
+              value="Garment Labels" %}
+            </h4>
+            <p>
+              {% text "garment_labels_desc" label="Garment Labels Description",
+              value="Convert garment label information into digital data during
+              sample check-in." %}
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-4">
+        <div class="position-relative card-top overflow-hidden h-100">
+          <img
+            src="{{ get_asset_url('../images/in-development-2.png') }}"
+            alt="in-development"
+            width="40%"
+            height="100%"
+            class="indevelopment-img"
+          />
+          <span class="badge in-development">in development</span>
+          <div
+            class="pt-5 pe-2 ps-4 d-flex flex-column justify-content-center card-desc"
+          >
+            <h4>
+              {% text "digital_models_title" label="Digital Models Title",
+              value="Digital Models" %}
+            </h4>
+            <p>
+              {% text "digital_models_desc" label="Digital Models Description",
+              value="Increase image variety with advanced digital models." %}
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-4">
+        <div class="position-relative card-top overflow-hidden h-100">
+          <img
+            src="{{ get_asset_url('../images/in-development-3.png') }}"
+            alt="in-development"
+            width="40%"
+            height="100%"
+            class="indevelopment-img"
+          />
+          <span class="badge in-development">in development</span>
+          <div
+            class="pt-5 pe-2 ps-4 d-flex flex-column justify-content-center card-desc"
+          >
+            <h4>
+              {% text "color_variations_title" label="Color Variations Title",
+              value="Color Variations" %}
+            </h4>
+            <p>
+              {% text "color_variations_desc" label="Color Variations
+              Description", value="Produce accurate and consistent color
+              variations." %}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="unlock-new py-5 position-relative overflow-hidden">
+  <div
+    class="container d-flex align-items-center text-center flex-column py-3 px-5"
+  >
+    <h2>
+      {% text "unlock_possibilities_title" label="Unlock Possibilities Title",
+      value="Unlock new possibilities with custom studio add-ons." %}
+    </h2>
+    <p class="w-75 text-center">
+      {% text "unlock_possibilities_desc" label="Unlock Possibilities
+      Description", value="Streamline workflows with powerful extensions
+      tailored to enhance vendor collaboration and editorial projects, ensuring
+      a seamless content production experience." %}
+    </p>
+    <div
+      class="mt-4 px-4 rounded w-100 overflow-hidden position-relative unlock-new-card-top unlock-new-card"
+    >
+      <div class="row">
+        <div class="col-4 d-flex justify-content-center d-none d-lg-block">
+          <div class="d-flex gap-2 position-absolute mansory-container">
+            <div class="d-flex flex-column gap-2">
+              <img
+                src="{{ get_asset_url('../images/mansory-1.png') }}"
+                alt="Image 1"
+              />
+              <img
+                src="{{ get_asset_url('../images/mansory-1.png') }}"
+                alt="Image 2"
+              />
+              <img
+                src="{{ get_asset_url('../images/mansory-1.png') }}"
+                alt="Image 3"
+              />
             </div>
-            <div class="d-flex gap-3 mt-3 justify-content-around">
-              <button
-                class="security-btn w-50 d-flex align-items-center gap-3 px-4 py-3"
-              >
-                <img src="{{ get_asset_url('../images/module-icons/security-3.svg') }}" alt="" />
-                <span class="fw-bold">Data Privacy& GDPR</span>
-              </button>
-              <button
-                class="security-btn w-50 d-flex align-items-center gap-3 px-4 py-3"
-              >
-                <img src="{{ get_asset_url('../images/module-icons/security-4.svg') }}" alt="" />
-                <span class="fw-bold">Third-Party Management</span>
-              </button>
+            <div class="d-flex flex-column gap-2 mt-5 pt-4">
+              <img
+                src="{{ get_asset_url('../images/mansory-1.png') }}"
+                alt="Image 4"
+              />
+              <img
+                src="{{ get_asset_url('../images/mansory-1.png') }}"
+                alt="Image 5"
+              />
+              <img
+                src="{{ get_asset_url('../images/mansory-1.png') }}"
+                alt="Image 6"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-8">
+          <div
+            class="w-75 px-3 py-5 color-dark-purple justify-content-center d-flex flex-column h-100 align-items-lg-start align-items-center"
+          >
+            <h4>
+              {% text "vendor_content_title" label="Vendor Content Title",
+              value="Vendor-provided content extension" %}
+            </h4>
+            <p>
+              {% text "vendor_content_desc" label="Vendor Content Description",
+              value="Streamline your workflow by managing vendor-provided assets
+              from initial request to final upload, ensuring consistency and
+              efficiency at every step." %}
+            </p>
+            <ul class="mt-3">
+              <li class="mt-1 d-flex align-items-center gap-1">
+                <img
+                  src="{{ get_asset_url('../images/module-icons/tick.svg') }}"
+                  alt="tick"
+                  class="me-1"
+                />
+                {% text "upload_portal" label="Upload Portal Text",
+                value="Upload directly in the portal" %}
+              </li>
+              <li class="mt-1 d-flex align-items-center gap-1">
+                <img
+                  src="{{ get_asset_url('../images/module-icons/tick.svg') }}"
+                  alt="tick"
+                  class="me-1"
+                />
+                {% text "track_unique_image_request_ids" label="Track Unique
+                Image Request IDs Text", value="Track unique image request IDs"
+                %}
+              </li>
+              <li class="mt-1 d-flex align-items-center gap-1">
+                <img
+                  src="{{ get_asset_url('../images/module-icons/tick.svg') }}"
+                  alt="tick"
+                  class="me-1"
+                />
+                {% text "visual_style_guides_and_standards" label="Visual Style
+                Guides and Standards Text", value="Visual style guides and
+                standards" %}
+              </li>
+              <li class="mt-1 d-flex align-items-center gap-1">
+                <img
+                  src="{{ get_asset_url('../images/module-icons/tick.svg') }}"
+                  alt="tick"
+                  class="me-1"
+                />
+                {% text "approvals_for_faster_turnaround" label="Approvals for
+                Faster Turnaround Text", value="Approvals for faster turnaround"
+                %}
+              </li>
+            </ul>
+            <button class="blue-btn readmore-btn mt-3">read more</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="add-on">add-on</div>
+      <img
+        src="{{ get_asset_url('../images/unlock-new-bottom-right-1.png') }}"
+        alt=""
+        class="unlock-new-bottom-right-img d-none d-xl-block"
+      />
+    </div>
+
+    <div
+      class="mt-4 px-4 rounded w-100 overflow-hidden position-relative unlock-new-card-bottom unlock-new-card"
+    >
+      <div class="row">
+        <div class="col-4 d-flex justify-content-center d-none d-lg-block">
+          <img
+            src="{{ get_asset_url('../images/editorial-1.png') }}"
+            alt=""
+            class="position-absolute editorial-1-img"
+            height="100%"
+          />
+        </div>
+        <div class="col-12 col-lg-8 z-1">
+          <div
+            class="w-75 px-3 py-5 color-dark-purple justify-content-center d-flex flex-column h-100 align-items-lg-start align-items-center"
+          >
+            <h4>Editorial projects extension</h4>
+            <p>
+              Control every step of your editorial projects with ease — from
+              planning and content creation to final approvals — ensuring teams
+              stay aligned and projects run smoothly.
+            </p>
+            <ul class="mt-3">
+              <li class="mt-1 d-flex align-items-center gap-1">
+                <img
+                  src="{{ get_asset_url('../images/module-icons/tick.svg') }}"
+                  alt="tick"
+                  class="me-1"
+                />
+                {% text "centralized_editorial_assets" label="Centralized
+                Editorial Assets Text", value="Centralized editorial assets" %}
+              </li>
+              <li class="mt-1 d-flex align-items-center gap-1">
+                <img
+                  src="{{ get_asset_url('../images/module-icons/tick.svg') }}"
+                  alt="tick"
+                  class="me-1"
+                />
+                {% text "collaborate_in_real_time" label="Collaborate in
+                Real-Time Text", value="Collaborate in real-time" %}
+              </li>
+              <li class="mt-1 d-flex align-items-center gap-1">
+                <img
+                  src="{{ get_asset_url('../images/module-icons/tick.svg') }}"
+                  alt="tick"
+                  class="me-1"
+                />
+                {% text "track_progress_and_milestones" label="Track Progress
+                and Milestones Text", value="Track progress and milestones" %}
+              </li>
+              <li class="mt-1 d-flex align-items-center gap-1">
+                <img
+                  src="{{ get_asset_url('../images/module-icons/tick.svg') }}"
+                  alt="tick"
+                  class="me-1"
+                />
+                {% text "integrate_visual_guides" label="Integrate Visual Guides
+                Text", value="Integrate visual guides" %}
+              </li>
+            </ul>
+            <button class="blue-btn readmore-btn mt-3">read more</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="add-on">add-on</div>
+      <img
+        src="{{ get_asset_url('../images/unlock-new-bottom-right-2.png') }}"
+        alt=""
+        class="unlock-new-bottom-right-img d-none d-xl-block"
+      />
+    </div>
+  </div>
+
+  <img
+    src="{{ get_asset_url('../images/ellipse-bg.svg') }}"
+    alt="ellipse-bg"
+    class="ellipse-bg-img"
+  />
+</section>
+<section class="compare-plans bg-blue py-3 py-lg-4 text-white">
+  <div class="container">
+    <div class="row px-4 px-sm-0">
+      <div class="col-12 col-lg-5 d-flex flex-column justify-content-center">
+        <h2>
+          {% text "compare_plans_title" label="Compare Plans Title",
+          value="Compare plans" %}
+        </h2>
+        <div class="d-flex text-uppercase gap-3 fs-7 mt-2">
+          <div class="key-features">
+            {% text "compare_plans_key_features" label="Compare Plans Key
+            Features", value="Key features" %}
+          </div>
+          <u class="all-features"
+            >{% text "compare_plans_all_features" label="Compare Plans All
+            Features", value="all features" %}</u
+          >
+        </div>
+      </div>
+      <div class="col-12 col-lg-7 mt-lg-0 mt-3">
+        <div class="row">
+          <div
+            class="col-12 col-sm-4 d-flex d-sm-block align-items-baseline gap-3"
+          >
+            <div class="fs-7">
+              {% text "compare_plans_starter" label="Compare Plans Starter",
+              value="Starter" %}
+            </div>
+            <div class="h5 mt-1 ms-auto" id="compare-starter-price"></div>
+            <button class="white-btn fs-7">
+              {% text "compare_plans_get_a_quote_1" label="Compare Plans Get A
+              Quote", value="get a quote" %}
+            </button>
+          </div>
+          <div
+            class="col-12 col-sm-4 d-flex d-sm-block align-items-baseline mt-2 mt-sm-0 gap-3"
+          >
+            <div class="fs-7">
+              {% text "compare_plans_core" label="Compare Plans Core",
+              value="Core" %}
+            </div>
+            <div class="h5 mt-1 ms-auto" id="compare-core-price"></div>
+            <button class="white-btn fs-7">
+              {% text "compare_plans_get_a_quote_2" label="Compare Plans Get A
+              Quote", value="get a quote" %}
+            </button>
+          </div>
+          <div
+            class="col-12 col-sm-4 d-flex d-sm-block align-items-baseline mt-2 mt-sm-0 gap-3"
+          >
+            <div class="fs-7">
+              {% text "compare_plans_enterprise" label="Compare Plans
+              Enterprise", value="Enterprise" %}
+            </div>
+            <div class="h5 mt-1 ms-auto">
+              {% text "compare_plans_custom" label="Compare Plans Custom",
+              value="Custom" %}
+            </div>
+            <button class="white-btn fs-7">
+              {% text "compare_plans_get_a_quote_3" label="Compare Plans Get A
+              Quote", value="get a quote" %}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="creative pt-5 position-relative pb-4">
+  <div class="container color-dark-purple color-dark-purple position-relative">
+    <h2>
+      {% text "creative_force_cloud_title" label="Creative Force Cloud Title",
+      value="Creative Force Cloud." %}
+    </h2>
+    <p>
+      {% text "creative_force_cloud_desc" label="Creative Force Cloud
+      Description", value="Scalable, secure, and built for seamless
+      collaboration across unlimited users and clients." %}
+    </p>
+    <table class="table table-bordered mt-4">
+      <colgroup>
+        <!-- 5/12 -->
+        <col style="width: 41.67%" />
+        <!-- 7/12 divided equally -->
+        <col style="width: 19.44%" />
+        <col style="width: 19.44%" id="col-3" />
+        <col style="width: 19.44%" />
+      </colgroup>
+      <tbody>
+        <tr>
+          <td class="d-flex align-items-center gap-2">
+            User
+            <img
+              src="{{ get_asset_url('../images/module-icons/info.svg') }}"
+              class="opacity-25"
+            />
+          </td>
+          <td>
+            {% text "unlimited_users_1" label="Unlimited Users Text 1",
+            value="Unlimited" %}
+          </td>
+          <td>
+            {% text "unlimited_users_2" label="Unlimited Users Text 2",
+            value="Unlimited" %}
+          </td>
+          <td>
+            {% text "unlimited_users_3" label="Unlimited Users Text 3",
+            value="Unlimited" %}
+          </td>
+        </tr>
+        <tr>
+          <td class="d-flex align-items-center gap-2">
+            {% text "workspaces_clients" label="Workspaces (Clients) Text",
+            value="Workspaces (Clients)" %}
+            <img
+              src="{{ get_asset_url('../images/module-icons/info.svg') }}"
+              class="opacity-25"
+            />
+          </td>
+          <td>{% text "one" label="One Text", value="1" %}</td>
+          <td>{% text "three" label="Three Text", value="3" %}</td>
+          <td>
+            {% text "unlimited_users_4" label="Unlimited Users Text 4",
+            value="Unlimited" %}
+          </td>
+        </tr>
+        <tr>
+          <td class="d-flex align-items-center gap-2">
+            {% text "additional_workspaces" label="Additional Workspaces Text",
+            value="Additional Workspaces" %}
+            <img
+              src="{{ get_asset_url('../images/module-icons/info.svg') }}"
+              class="opacity-25"
+            />
+          </td>
+          <td></td>
+          <td></td>
+          <td>$</td>
+        </tr>
+        <tr>
+          <td>
+            {% text "cloud_based" label="Cloud Based Text", value="Cloud Based"
+            %}
+          </td>
+          <td>
+            <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" />
+          </td>
+          <td>
+            <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" />
+          </td>
+          <td>
+            <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            {% text "multi_tenant_database" label="Multi-Tenant Database Text",
+            value="Multi-Tenant Database" %}
+          </td>
+          <td>
+            <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" />
+          </td>
+          <td>
+            <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" />
+          </td>
+          <td>
+            <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            {% text "regional_multi_tenant_binary_storage" label="Regional
+            Multi-Tenant Binary Storage Text", value="Regional Multi-Tenant
+            Binary Storage" %}
+          </td>
+          <td>
+            <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" />
+          </td>
+          <td>
+            <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" />
+          </td>
+          <td>
+            <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            {% text "full_redundant_back_up" label="Full Redundant Back-up
+            Text", value="Full Redundant Back-up" %}
+          </td>
+          <td></td>
+          <td>$</td>
+          <td>$</td>
+        </tr>
+        <tr>
+          <td>
+            {% text "dedicated_database" label="Dedicated Database Text",
+            value="Dedicated Database" %}
+          </td>
+          <td></td>
+          <td></td>
+          <td>$</td>
+        </tr>
+        <tr>
+          <td>
+            {% text "dedicated_binary_storage" label="Dedicated Binary Storage
+            Text", value="Dedicated Binary Storage" %}
+          </td>
+          <td></td>
+          <td></td>
+          <td>$</td>
+        </tr>
+        <tr>
+          <td>{% text "api" label="API Text", value="API" %}</td>
+          <td>
+            <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" />
+          </td>
+          <td>
+            <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" />
+          </td>
+          <td>
+            <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" />
+          </td>
+        </tr>
+        <tr>
+          <td>{% text "webhooks" label="Webhooks Text", value="Webhooks" %}</td>
+          <td>
+            <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" />
+          </td>
+          <td>
+            <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" />
+          </td>
+          <td>
+            <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            {% text "file_automation" label="File Automation Text", value="File
+            Automation" %}
+          </td>
+          <td>
+            <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" />
+          </td>
+          <td>
+            <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" />
+          </td>
+          <td>
+            <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            {% text "ftp_server_10_gb" label="FTP Server (10 Gb) Text",
+            value="FTP Server(10 Gb)" %}
+          </td>
+          <td></td>
+          <td>
+            <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" />
+          </td>
+          <td>
+            <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" />
+          </td>
+        </tr>
+        <tr>
+          <td>{% text "api" label="API Text", value="API" %}</td>
+          <td>
+            <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" />
+          </td>
+          <td>
+            <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" />
+          </td>
+          <td>
+            <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" />
+          </td>
+        </tr>
+        <tr>
+          <td>{% text "api" label="API Text", value="API" %}</td>
+          <td>
+            <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" />
+          </td>
+          <td>
+            <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" />
+          </td>
+          <td>
+            <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="creative-overlay"></div>
+  <div class="col-3-overlay"></div>
+  <div class="show-all-overlay"></div>
+  <div
+    class="position-absolute show-all fw-semibold text-center w-100 text-decoration-underline"
+  >
+    {% text "show_all" label="Show All Text", value="Show all" %}
+  </div>
+</section>
+
+<section
+  class="trusted-by py-5 position-relative overflow-hidden bg-light-purple"
+>
+  <div class="container color-dark-purple text-center">
+    <h1>
+      {% text "trusted_by_title" label="Trusted By Title", value="Trusted by
+      industry leaders." %}
+    </h1>
+    <p class="mt-4 mb-5 pb-3">
+      {% text "trusted_by_description" label="Trusted By Description",
+      value="See how creative force empowers brands to achieve faster results,
+      increase productivity, and streamline their creative processes." %}
+    </p>
+
+    <div class="row">
+      <div class="col-md-8 col-12">
+        <div class="row">
+          <div class="col-8">
+            <div
+              class="h-100 trusted-card p-lg-5 p-md-4 p-3 rounded text-center"
+            >
+              <p>
+                Decreased photographer onboarding time from 1 day to 20 minutes
+              </p>
+              <u class="text-uppercase fs-7 fw-semibold"> boohoo case study </u>
+            </div>
+          </div>
+          <div class="col-4">
+            <div
+              class="h-100 trusted-card p-lg-5 p-md-4 p-3 rounded text-center"
+            >
+              <p>MACH Certified</p>
+              <img
+                src="{{ get_asset_url('../images/mach.png') }}"
+                width="100%"
+              />
+            </div>
+          </div>
+          <div class="col-6 mt-4">
+            <div
+              class="trusted-card p-lg-5 pt-lg-4 p-md-4 p-3 mb-3 rounded text-center"
+            >
+              <div class="big-3x">3x</div>
+              <p class="fw-semibold">
+                More marketing projects completed per year
+              </p>
+              <u class="text-uppercase fs-7 fw-semibold"> sanmar case study </u>
+            </div>
+
+            <div class="trusted-card p-lg-5 p-md-4 p-3 rounded text-center">
+              <img
+                src="{{ get_asset_url('../images/module-icons/g2.svg') }}"
+                alt="G2"
+              />
+              <p class="mt-2 fw-semibold">
+                "Creative Force isn't just software; it's a partnership with a
+                shared goal of creating efficiencies within workflows."
+              </p>
+              <p class="fw-semibold text-uppercase fs-7 mt-3 mb-0">
+                Michelle M.
+              </p>
+              <p class="fs-7 mb-0">
+                Director, Creative & Photo Studio Operations
+              </p>
+              <img
+                src="{{ get_asset_url('../images/module-icons/stars.svg') }}"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="col-6 mt-4">
+            <div
+              class="trusted-card p-lg-5 p-md-4 p-3 pb-4 rounded text-center"
+            >
+              <p class="fw-semibold">
+                "Implementing Creative Force reduced a large amount of
+                unnecessary admin work which has improved efficiency and lowered
+                potential reshoots, which is a large cost- and time-saver."
+              </p>
+              <p class="mt-3 fs-7 mb-1">
+                <span class="fw-semibold">Joel Pammenter</span> — Senior
+                Photographer
+              </p>
+              <img
+                src="{{ get_asset_url('../images/module-icons/boohoo.svg') }}"
+                alt=""
+                class="mb-4"
+              />
+            </div>
+            <div class="trusted-card mt-5 px-3 pt-3 rounded text-center">
+              <img
+                src="{{ get_asset_url('../images/higher-performer.png') }}"
+                width="100%"
+                alt=""
+              />
             </div>
           </div>
         </div>
       </div>
-    </section>
-
-    <section
-    class="frequently-asked bg-light-purple position-relative overflow-hidden"
-  >
-    <div class="container py-5 color-dark-purple">
-      <h1 class="text-center">{% text "faq_title" label="FAQ Title", value="Frequently asked questions." %}</h1>
-      <p class="mt-2 mb-4 text-center">
-        {% text "faq_desc" label="FAQ Description", value="Looking for more information? Check out these frequently asked questions about our pricing." %}
-      </p>
-
-      <details open>
-        <summary class="fs-5 fw-semibold">
-          {% text "faq_q1" label="FAQ Question 1", value="How do monthly and annual pricing differ?" %}
-        </summary>
-        <div class="pe-5">
+      <div class="col-md-4 col-12">
+        <div class="trusted-card p-lg-5 p-md-4 p-3 pb-4 rounded text-center">
           <p>
-            {% text "faq_a1" label="FAQ Answer 1", value="Tempor velit a nibh dui facilisis congue etiam amet. Efficitur ullamcorper egestas maecenas ullamcorper ad interdum ridiculus enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur." %}
+            "We can just come in, get into the flow, get into the groove. We
+            pass our files off just like everyone else does. But all that little
+            painstaking, not fun stuff, is handled by the program."
           </p>
-        </div>
-      </details>
-
-      <details>
-        <summary class="fs-5 fw-semibold">
-          {% text "faq_q2" label="FAQ Question 2", value="How many users are included in Starter and Core plans?" %}
-        </summary>
-        <div class="pe-5">
-          <p>
-            {% text "faq_a2" label="FAQ Answer 2", value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." %}
+          <p class="mt-3 fs-7 mb-1">
+            <span class="fw-semibold">Anthony nocella </span> — Lead
+            Photographer
           </p>
+          <img
+            src="{{ get_asset_url('../images/module-icons/nuuly.svg') }}"
+            alt=""
+            class="mb-5"
+          />
         </div>
-      </details>
-
-      <details>
-        <summary class="fs-5 fw-semibold">
-          {% text "faq_q3" label="FAQ Question 3", value="Is there a minimum contract length?" %}
-        </summary>
-        <div class="pe-5">
-          <p>
-            {% text "faq_a3" label="FAQ Answer 3", value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." %}
-          </p>
-        </div>
-      </details>
-
-      <details>
-        <summary class="fs-5 fw-semibold">
-          {% text "faq_q4" label="FAQ Question 4", value="Will I be charged sales tax?" %}
-        </summary>
-        <div class="pe-5">
-          <p>
-            {% text "faq_a4" label="FAQ Answer 4", value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." %}
-          </p>
-        </div>
-      </details>
-
-      <details>
-        <summary class="fs-5 fw-semibold">
-          {% text "faq_q5" label="FAQ Question 5", value="Who on my account can add users?" %}
-        </summary>
-        <div class="pe-5">
-          <p>
-            {% text "faq_a5" label="FAQ Answer 5", value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." %}
-          </p>
-        </div>
-      </details>
-
-      <details>
-        <summary class="fs-5 fw-semibold">
-          {% text "faq_q6" label="FAQ Question 6", value="What happens if I exceed my current plan limits?" %}
-        </summary>
-        <div class="pe-5">
-          <p>
-            {% text "faq_a6" label="FAQ Answer 6", value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." %}
-          </p>
-        </div>
-      </details>
-
-      <details>
-        <summary class="fs-5 fw-semibold">
-          {% text "faq_q7" label="FAQ Question 7", value="Do my external clients need to have an account?" %}
-        </summary>
-        <div class="pe-5">
-          <p>
-            {% text "faq_a7" label="FAQ Answer 7", value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." %}
-          </p>
-        </div>
-      </details>
-
-      <details>
-        <summary class="fs-5 fw-semibold">
-          {% text "faq_q8" label="FAQ Question 8", value="Can I upgrade my plan mid-cycle?" %}
-        </summary>
-        <div class="pe-5">
-          <p>
-            {% text "faq_a8" label="FAQ Answer 8", value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." %}
-          </p>
-        </div>
-      </details>
-    </div>
-
-    <img
-      src="{{ get_asset_url('../images/frequently-asked-overlay.svg') }}"
-      class="frequently-asked-overlay"
-      alt=""
-    />
-  </section>
-
-  <section class="explore bg-purple">
-        <div class="container py-5 color-dark-purple">
-          <div class="row">
-            <div class="col-md-5 col-12">
-              <h2>
-                {% text "explore_title_1" label="Explore Title Part 1", value="Explore the" %}
-                <i class="ai-driven fw-light">{% text "explore_title_2" label="Explore Title Part 2", value="AI-driven" %}</i>
-                  <br>
-                {% text "explore_title_3" label="Explore Title Part 3", value="future of content production." %}
-              </h2>
-              <p class="mt-3">
-                {% text "explore_desc" label="Explore Description", value="Transform your studio operations with innovative, AI-powered solutions tailored for the future of content creation. Learn how we can elevate your workflow today." %}
-              </p>
-
-              <button class="blue-btn px-4">
-                {% text "talk_with_us_button" label="Talk With Us Button", value="talk with us" %}
-              </button>
-              <img
-                class="mt-4 talk-with"
-                src="{{ get_asset_url('../images/talk-with.png') }}"
-                alt=""
-                width="100%"
-              />
-            </div>
-            <div class="col-md-7 col-12">
-              <img
-                src="{{ get_asset_url('../images/explore.png') }}"
-                alt=""
-                width="100%"
-                height="100%"
-                class="explore-img"
-              />
+        <div class="trusted-card p-lg-5 p-md-4 p-3 pb-4 rounded text-center">
+          <div
+            class="d-flex align-items-center justify-content-around flex-wrap"
+          >
+            <img
+              src="{{ get_asset_url('../images/module-icons/g2.svg') }}"
+              alt=""
+              width="35px"
+            />
+            <img
+              src="{{ get_asset_url('../images/module-icons/star.png') }}"
+              alt=""
+            />
+            <div class="mt-3 mt-xxl-0">
+              <span class="fw-semibold">4.7</span>
+              out of
+              <span class="fw-semibold">5</span>
             </div>
           </div>
         </div>
-      </section>
+
+        <div class="trusted-card mt-4 mb-4 px-5 pb-5 rounded text-center">
+          <div class="big-3x">82%</div>
+          <p class="mt-2 fs-5 fw-semibold">Faster turnaround time</p>
+          <p
+            class="text-uppercase fs-7 fw-semibold pb-5 text-decoration-underline"
+          >
+            Orendt studios case study
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="list-trusted row mt-0 mt-lg-4">
+      <div
+        class="col-xl-2 col-lg-4 col-sm-6 col-12 d-flex align-items-center justify-content-center"
+      >
+        <img src="{{ get_asset_url('../images/trusted-1.svg') }}" alt="" />
+      </div>
+      <div
+        class="col-xl-2 col-lg-4 col-sm-6 col-12 d-flex align-items-center justify-content-center"
+      >
+        <img src="{{ get_asset_url('../images/trusted-2.svg') }}" alt="" />
+      </div>
+      <div
+        class="col-xl-2 col-lg-4 col-sm-6 col-12 d-flex align-items-center justify-content-center"
+      >
+        <img src="{{ get_asset_url('../images/trusted-3.svg') }}" alt="" />
+      </div>
+      <div
+        class="col-xl-2 col-lg-4 col-sm-6 col-12 d-flex align-items-center justify-content-center"
+      >
+        <img src="{{ get_asset_url('../images/trusted-4.svg') }}" alt="" />
+      </div>
+      <div
+        class="col-xl-2 col-lg-4 col-sm-6 col-12 d-flex align-items-center justify-content-center"
+      >
+        <img src="{{ get_asset_url('../images/trusted-5.svg') }}" alt="" />
+      </div>
+      <div
+        class="col-xl-2 col-lg-4 col-sm-6 col-12 d-flex align-items-center justify-content-center"
+      >
+        <img src="{{ get_asset_url('../images/trusted-6.svg') }}" alt="" />
+      </div>
+    </div>
+  </div>
+
+  <img
+    src="{{ get_asset_url('../images/trustedby-overlay.svg') }}"
+    class="trustedby-img"
+  />
+</section>
+
+<section class="security-compliance bg-purple">
+  <div class="container py-5 px-3 color-dark-purple">
+    <div class="row">
+      <div class="col-lg-6 col-12">
+        <h2>
+          {% text "security_compliance_title" label="Security Compliance Title",
+          value="Security & Compliance." %}
+        </h2>
+        <p class="fw-semibold mt-3">
+          {% text "security_compliance_desc" label="Security Compliance
+          Description", value="Built to meet the highest standards of data
+          protection and regulatory compliance. Our robust infrastructure
+          includes advanced encryption protocols, ensuring your data remains
+          secure and fully compliant at all times." %}
+        </p>
+      </div>
+      <div class="col-lg-6 col-12 mt-3 mt-lg-0">
+        <div class="d-flex gap-3 justify-content-around">
+          <button
+            class="security-btn w-50 d-flex align-items-center gap-3 px-4 py-3"
+          >
+            <img
+              src="{{ get_asset_url('../images/module-icons/security-1.svg') }}"
+              alt=""
+            />
+            <span class="fw-bold">SOC 2 Type II</span>
+          </button>
+          <button
+            class="security-btn w-50 d-flex align-items-center gap-3 px-4 py-3"
+          >
+            <img
+              src="{{ get_asset_url('../images/module-icons/security-2.svg') }}"
+              alt=""
+            />
+            <span class="fw-bold">256-bit Encryption</span>
+          </button>
+        </div>
+        <div class="d-flex gap-3 mt-3 justify-content-around">
+          <button
+            class="security-btn w-50 d-flex align-items-center gap-3 px-4 py-3"
+          >
+            <img
+              src="{{ get_asset_url('../images/module-icons/security-3.svg') }}"
+              alt=""
+            />
+            <span class="fw-bold">Data Privacy& GDPR</span>
+          </button>
+          <button
+            class="security-btn w-50 d-flex align-items-center gap-3 px-4 py-3"
+          >
+            <img
+              src="{{ get_asset_url('../images/module-icons/security-4.svg') }}"
+              alt=""
+            />
+            <span class="fw-bold">Third-Party Management</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section
+  class="frequently-asked bg-light-purple position-relative overflow-hidden"
+>
+  <div class="container py-5 color-dark-purple">
+    <h1 class="text-center">
+      {% text "faq_title" label="FAQ Title", value="Frequently asked questions."
+      %}
+    </h1>
+    <p class="mt-2 mb-4 text-center">
+      {% text "faq_desc" label="FAQ Description", value="Looking for more
+      information? Check out these frequently asked questions about our
+      pricing." %}
+    </p>
+
+    <details open>
+      <summary class="fs-5 fw-semibold">
+        {% text "faq_q1" label="FAQ Question 1", value="How do monthly and
+        annual pricing differ?" %}
+      </summary>
+      <div class="pe-5">
+        <p>
+          {% text "faq_a1" label="FAQ Answer 1", value="Tempor velit a nibh dui
+          facilisis congue etiam amet. Efficitur ullamcorper egestas maecenas
+          ullamcorper ad interdum ridiculus enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+          dolore eu fugiat nulla pariatur." %}
+        </p>
+      </div>
+    </details>
+
+    <details>
+      <summary class="fs-5 fw-semibold">
+        {% text "faq_q2" label="FAQ Question 2", value="How many users are
+        included in Starter and Core plans?" %}
+      </summary>
+      <div class="pe-5">
+        <p>
+          {% text "faq_a2" label="FAQ Answer 2", value="Lorem ipsum dolor sit
+          amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+          labore et dolore magna aliqua." %}
+        </p>
+      </div>
+    </details>
+
+    <details>
+      <summary class="fs-5 fw-semibold">
+        {% text "faq_q3" label="FAQ Question 3", value="Is there a minimum
+        contract length?" %}
+      </summary>
+      <div class="pe-5">
+        <p>
+          {% text "faq_a3" label="FAQ Answer 3", value="Lorem ipsum dolor sit
+          amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+          labore et dolore magna aliqua." %}
+        </p>
+      </div>
+    </details>
+
+    <details>
+      <summary class="fs-5 fw-semibold">
+        {% text "faq_q4" label="FAQ Question 4", value="Will I be charged sales
+        tax?" %}
+      </summary>
+      <div class="pe-5">
+        <p>
+          {% text "faq_a4" label="FAQ Answer 4", value="Lorem ipsum dolor sit
+          amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+          labore et dolore magna aliqua." %}
+        </p>
+      </div>
+    </details>
+
+    <details>
+      <summary class="fs-5 fw-semibold">
+        {% text "faq_q5" label="FAQ Question 5", value="Who on my account can
+        add users?" %}
+      </summary>
+      <div class="pe-5">
+        <p>
+          {% text "faq_a5" label="FAQ Answer 5", value="Lorem ipsum dolor sit
+          amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+          labore et dolore magna aliqua." %}
+        </p>
+      </div>
+    </details>
+
+    <details>
+      <summary class="fs-5 fw-semibold">
+        {% text "faq_q6" label="FAQ Question 6", value="What happens if I exceed
+        my current plan limits?" %}
+      </summary>
+      <div class="pe-5">
+        <p>
+          {% text "faq_a6" label="FAQ Answer 6", value="Lorem ipsum dolor sit
+          amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+          labore et dolore magna aliqua." %}
+        </p>
+      </div>
+    </details>
+
+    <details>
+      <summary class="fs-5 fw-semibold">
+        {% text "faq_q7" label="FAQ Question 7", value="Do my external clients
+        need to have an account?" %}
+      </summary>
+      <div class="pe-5">
+        <p>
+          {% text "faq_a7" label="FAQ Answer 7", value="Lorem ipsum dolor sit
+          amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+          labore et dolore magna aliqua." %}
+        </p>
+      </div>
+    </details>
+
+    <details>
+      <summary class="fs-5 fw-semibold">
+        {% text "faq_q8" label="FAQ Question 8", value="Can I upgrade my plan
+        mid-cycle?" %}
+      </summary>
+      <div class="pe-5">
+        <p>
+          {% text "faq_a8" label="FAQ Answer 8", value="Lorem ipsum dolor sit
+          amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+          labore et dolore magna aliqua." %}
+        </p>
+      </div>
+    </details>
+  </div>
+
+  <img
+    src="{{ get_asset_url('../images/frequently-asked-overlay.svg') }}"
+    class="frequently-asked-overlay"
+    alt=""
+  />
+</section>
+
+<section class="explore bg-purple">
+  <div class="container py-5 color-dark-purple">
+    <div class="row">
+      <div class="col-md-5 col-12">
+        <h2>
+          {% text "explore_title_1" label="Explore Title Part 1", value="Explore
+          the" %}
+          <i class="ai-driven fw-light"
+            >{% text "explore_title_2" label="Explore Title Part 2",
+            value="AI-driven" %}</i
+          >
+          <br />
+          {% text "explore_title_3" label="Explore Title Part 3", value="future
+          of content production." %}
+        </h2>
+        <p class="mt-3">
+          {% text "explore_desc" label="Explore Description", value="Transform
+          your studio operations with innovative, AI-powered solutions tailored
+          for the future of content creation. Learn how we can elevate your
+          workflow today." %}
+        </p>
+
+        <button class="blue-btn px-4">
+          {% text "talk_with_us_button" label="Talk With Us Button", value="talk
+          with us" %}
+        </button>
+        <img
+          class="mt-4 talk-with"
+          src="{{ get_asset_url('../images/talk-with.png') }}"
+          alt=""
+          width="100%"
+        />
+      </div>
+      <div class="col-md-7 col-12">
+        <img
+          src="{{ get_asset_url('../images/explore.png') }}"
+          alt=""
+          width="100%"
+          height="100%"
+          class="explore-img"
+        />
+      </div>
+    </div>
+  </div>
+</section>
 {% endblock body %}
