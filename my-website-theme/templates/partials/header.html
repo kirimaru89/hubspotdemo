@@ -6,13 +6,13 @@
       <div class="d-flex align-items-center gap-1">
         <img src="{{ get_asset_url('../../images/module-icons/logo.svg') }}" alt="logo-hubspot" />
         <div class="text-capitalize lh-sm text-white fs-7">
-          create <br />
-          force
+          {% text "header_logo_text_1" label="Header Logo Text Line 1", value="Creative" %} <br />
+          {% text "header_logo_text_2" label="Header Logo Text Line 2", value="force" %}
         </div>
 
         <div class="d-flex align-items-center gap-3 fs-7 d-lg-none ps-4">
-          <button class="off-white-btn text-uppercase">login</button>
-          <button class="blue-btn text-uppercase me-2">book a demo</button>
+          <button class="off-white-btn text-uppercase">{% text "mobile_login_btn" label="Mobile Login Button", value="login" %}</button>
+          <button class="blue-btn text-uppercase me-2">{% text "mobile_demo_btn" label="Mobile Demo Button", value="book a demo" %}</button>
           <img src="{{ get_asset_url('../../images/module-icons/search.svg') }}" alt="search" />
         </div>
       </div>
@@ -20,15 +20,15 @@
       <ul
         class="nav-menu text-uppercase d-flex off-white-btn fs-7 gap-3 mb-0"
       >
-        <li>platform +</li>
-        <li>solutions +</li>
-        <li>resources +</li>
-        <li>pricing</li>
+        <li>{% text "nav_platform" label="Navigation Platform", value="platform +" %}</li>
+        <li>{% text "nav_solutions" label="Navigation Solutions", value="solutions +" %}</li>
+        <li>{% text "nav_resources" label="Navigation Resources", value="resources +" %}</li>
+        <li>{% text "nav_pricing" label="Navigation Pricing", value="pricing" %}</li>
       </ul>
 
       <div class="d-flex align-items-center gap-3 fs-7 d-none d-lg-block">
-        <button class="off-white-btn text-uppercase">login</button>
-        <button class="blue-btn text-uppercase me-2">book a demo</button>
+        <button class="off-white-btn text-uppercase">{% text "desktop_login_btn" label="Desktop Login Button", value="login" %}</button>
+        <button class="blue-btn text-uppercase me-2">{% text "desktop_demo_btn" label="Desktop Demo Button", value="book a demo" %}</button>
         <img src="{{ get_asset_url('../../images/module-icons/search.svg') }}" alt="search" />
       </div>
     </div>
