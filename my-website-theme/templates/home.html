@@ -11,20 +11,19 @@
   <section class="top-header pt-5 px-4 pb-5">
         <div class="container mt-5 mb-4 text-white">
           <h1 class="mt-3 pt-lg-0 pt-5">
-            Choose the best plan for your business
+            {% text "choose_plan_heading" label="Choose Plan Heading", value="Choose the best plan for your business" %}
           </h1>
           <div class="mt-2">
-            Find the perfect plan tailored to your organization’s production
-            volume and needs.
+            {% text "plan_description" label="Plan Description", value="Find the perfect plan tailored to your organization's production volume and needs." %}
           </div>
 
           <div class="mt-4 mb-2">
             <div class="estimation-range text-white flex-wrap">
               <span class="px-2 py-1 text-center estimation">Estimation</span>
-              I deliver
+              {% text "deliver_text" label="Deliver Text", value="I deliver" %}
               <span class="off-white-btn py-1 px-2" id="deliver">10,000</span>
               <div class="d-flex align-items-center gap-2">
-                final assets yearly
+                {% text "final_assets_yearly" label="Final Assets Yearly Text", value="final assets yearly" %}
                 <img src="{{ get_asset_url('../images/module-icons/info.svg') }}" alt="info" />
               </div>
             </div>
@@ -51,8 +50,8 @@
           <div class="row mt-5 pt-3 gap-4 gap-md-0">
             <div class="col-md-4 col-sm-12">
               <div class="p-4 bg-white rounded color-dark-purple h-100">
-                <h4 class="color-blue">Starter</h4>
-                <div class="mt-2">Starts at</div>
+                <h4 class="color-blue">{% text "starter_title" label="Starter Title", value="Starter" %}</h4>
+                <div class="mt-2">{% text "starts_at" label="Starts At Text", value="Starts at" %}</div>
                 <div class="d-flex mt-1 align-items-center gap-2">
                   <h2 class="mb-0 price" id="starter-price">$2,400</h2>
                   <div class="color-light-purple month-billed">
@@ -61,73 +60,72 @@
                   </div>
                 </div>
                 <div class="mt-2 equal-height">
-                  For retailers of all sizes. Get started with workflow
-                  automation and get benefits from day one.
+                  {% text "starter_description" label="Starter Description", value="For retailers of all sizes. Get started with workflow automation and get benefits from day one." %}
                 </div>
                 <button class="blue-btn mt-3 text-uppercase">
-                  get a quote
+                  {% text "get_quote_button" label="Get Quote Button", value="get a quote" %}
                 </button>
 
                 <ul class="mt-3">
                   <li class="d-flex align-items-center gap-2">
                     <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    <span class="fw-bold"> Unlimited Users </span>
+                    <span class="fw-bold">{% text "unlimited_users" label="Unlimited Users Text", value="Unlimited Users" %}</span>
                   </li>
                   <li class="d-flex align-items-center gap-2">
                     <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    Images, Video & Copy
+                    {% text "images_video_copy" label="Images Video Copy Text", value="Images, Video & Copy" %}
                   </li>
                   <li class="d-flex align-items-center gap-2">
                     <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    Digital Style Guides
+                    {% text "digital_style_guides" label="Digital Style Guides Text", value="Digital Style Guides" %}
                   </li>
                   <li class="d-flex align-items-center gap-2">
                     <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    Workflow Automation
+                    {% text "workflow_automation" label="Workflow Automation Text", value="Workflow Automation" %}
                   </li>
                   <li class="d-flex align-items-center gap-2">
                     <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    Metadata Enrichment
+                    {% text "metadata_enrichment" label="Metadata Enrichment Text", value="Metadata Enrichment" %}
                   </li>
                   <li class="d-flex align-items-center gap-2">
                     <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    Sample Management
+                    {% text "sample_management" label="Sample Management Text", value="Sample Management" %}
                   </li>
                   <li class="d-flex align-items-center gap-2">
                     <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    File Automation
+                    {% text "file_automation" label="File Automation Text", value="File Automation" %}
                   </li>
                   <li class="d-flex align-items-center gap-2">
                     <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    Asset Hub
+                    {% text "asset_hub" label="Asset Hub Text", value="Asset Hub" %}
                   </li>
                   <li class="d-flex align-items-center gap-2">
                     <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    API & Webhooks
+                    {% text "api_webhooks" label="API & Webhooks Text", value="API & Webhooks" %}
                   </li>
                   <li class="d-flex align-items-center gap-2">
                     <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    All Connectors
+                    {% text "all_connectors" label="All Connectors Text", value="All Connectors" %}
                   </li>
                   <li class="d-flex align-items-center gap-2">
                     <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    Standard Reporting
+                    {% text "standard_reporting" label="Standard Reporting Text", value="Standard Reporting" %}
                   </li>
                   <li class="d-flex align-items-center gap-2">
                     <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    Email Support
+                    {% text "email_support" label="Email Support Text", value="Email Support" %}
                   </li>
                   <li class="d-flex align-items-center gap-2">
                     <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    Online Academy
+                    {% text "online_academy" label="Online Academy Text", value="Online Academy" %}
                   </li>
                 </ul>
               </div>
             </div>
             <div class="col-md-4 col-sm-12">
               <div class="p-4 bg-white rounded color-dark-purple h-100">
-                <h4 class="color-blue">Core</h4>
-                <div class="mt-2">Starts at</div>
+                <h4 class="color-blue">{% text "core_title" label="Core Title", value="Core" %}</h4>
+                <div class="mt-2">{% text "starts_at_core" label="Starts At Core Text", value="Starts at" %}</div>
                 <div class="d-flex mt-1 align-items-center gap-2">
                   <h2 class="mb-0 price" id="core-price">$4,100</h2>
                   <div class="color-light-purple month-billed">
@@ -136,135 +134,132 @@
                   </div>
                 </div>
                 <div class="mt-2 equal-height">
-                  For retailers of all sizes with a need for advanced workflow
-                  automation. Take your business to the next level.
+                  {% text "core_description" label="Core Description", value="For retailers of all sizes with a need for advanced workflow automation. Take your business to the next level." %}
                 </div>
                 <button class="blue-btn mt-3 text-uppercase">
-                  get a quote
+                  {% text "get_quote_button_core" label="Get Quote Button Core", value="get a quote" %}
                 </button>
 
                 <ul class="mt-3">
                   <li class="d-flex align-items-center gap-2">
-                    <span class="fw-bold"> Everything in Starter + </span>
+                    <span class="fw-bold">{% text "everything_in_starter" label="Everything in Starter Text", value="Everything in Starter +" %}</span>
                   </li>
                   <li class="d-flex align-items-center gap-2">
                     <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    AI Automation
+                    {% text "ai_automation" label="AI Automation Text", value="AI Automation" %}
                   </li>
                   <li class="d-flex align-items-center gap-2">
                     <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    2FA & SSO
+                    {% text "2fa_sso" label="2FA & SSO Text", value="2FA & SSO" %}
                   </li>
                   <li class="d-flex align-items-center gap-2">
                     <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    Data Sources
+                    {% text "data_sources" label="Data Sources Text", value="Data Sources" %}
                   </li>
                   <li class="d-flex align-items-center gap-2">
                     <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    Workflow Logic & Alerts
+                    {% text "workflow_logic_alerts" label="Workflow Logic & Alerts Text", value="Workflow Logic & Alerts" %}
                   </li>
                   <li class="d-flex align-items-center gap-2">
                     <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    Styling & Outfitting
+                    {% text "styling_outfitting" label="Styling & Outfitting Text", value="Styling & Outfitting" %}
                   </li>
                   <li class="d-flex align-items-center gap-2">
                     <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    Mobile Application
+                    {% text "mobile_application" label="Mobile Application Text", value="Mobile Application" %}
                   </li>
                   <li class="d-flex align-items-center gap-2">
                     <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    Planning Calendar
+                    {% text "planning_calendar" label="Planning Calendar Text", value="Planning Calendar" %}
                   </li>
                   <li class="d-flex align-items-center gap-2">
                     <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    Capture One Integration
+                    {% text "capture_one_integration" label="Capture One Integration Text", value="Capture One Integration" %}
                   </li>
                   <li class="d-flex align-items-center gap-2">
                     <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    Adobe Photoshop Integration
+                    {% text "adobe_photoshop_integration" label="Adobe Photoshop Integration Text", value="Adobe Photoshop Integration" %}
                   </li>
                   <li class="d-flex align-items-center gap-2">
                     <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    Custom Reporting
+                    {% text "custom_reporting" label="Custom Reporting Text", value="Custom Reporting" %}
                   </li>
                   <li class="d-flex align-items-center gap-2">
                     <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    24/5 In-App Chat Support
+                    {% text "24_5_in_app_chat_support" label="24/5 In-App Chat Support Text", value="24/5 In-App Chat Support" %}
                   </li>
 
                   <li class="d-flex align-items-center gap-2">
                     <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    Collection Sharing
+                    {% text "collection_sharing" label="Collection Sharing Text", value="Collection Sharing" %}
                   </li>
                 </ul>
               </div>
             </div>
             <div class="col-md-4 col-sm-12">
               <div class="p-4 bg-white rounded color-dark-purple h-100">
-                <h4 class="color-blue">Enterprise</h4>
+                <h4 class="color-blue">{% text "enterprise_title" label="Enterprise Title", value="Enterprise" %}</h4>
                 <div class="d-flex mt-4 pt-2 align-items-center gap-2">
-                  <h2 class="mb-0 price">Custom</h2>
+                  <h2 class="mb-0 price">{% text "custom_price" label="Custom Price Text", value="Custom" %}</h2>
                 </div>
                 <div class="mt-2 equal-height">
-                  For retailers of all sizes with a need for advanced workflow
-                  automation. Take your business to the next level.
+                  {% text "enterprise_description" label="Enterprise Description", value="For retailers of all sizes with a need for advanced workflow automation. Take your business to the next level." %}
                 </div>
                 <button class="blue-btn mt-3 text-uppercase">
-                  get a quote
+                  {% text "get_quote_button_enterprise" label="Get Quote Button Enterprise", value="get a quote" %}
                 </button>
 
                 <ul class="mt-3">
                   <li class="d-flex align-items-center gap-2">
-                    <span class="fw-bold"> Everything in Starter + </span>
+                    <span class="fw-bold">{% text "everything_in_core" label="Everything in Core Text", value="Everything in Core +" %}</span>
                   </li>
                   <li class="d-flex align-items-center gap-2">
                     <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    AI Automation
+                    {% text "unlimited_workspaces" label="Unlimited Workspaces Text", value="Unlimited Workspaces" %}
                   </li>
                   <li class="d-flex align-items-center gap-2">
                     <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    2FA & SSO
+                    {% text "talent_resourcing" label="Talent Resourcing Text", value="Talent Resourcing" %}
                   </li>
                   <li class="d-flex align-items-center gap-2">
                     <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    Data Sources
+                    {% text "call_sheets" label="Call Sheets Text", value="Call Sheets & Talent Booking" %}
                   </li>
                   <li class="d-flex align-items-center gap-2">
                     <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    Workflow Logic & Alerts
+                    {% text "adobe_premiere" label="Adobe Premiere Text", value="Adobe Premiere Integration" %}
                   </li>
                   <li class="d-flex align-items-center gap-2">
                     <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    Styling & Outfitting
+                    {% text "data_analyst" label="Data Analyst Text", value="Data Analyst Access" %}
                   </li>
                   <li class="d-flex align-items-center gap-2">
                     <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    Mobile Application
+                    {% text "dedicated_account" label="Dedicated Account Text", value="Dedicated Account Team" %}
                   </li>
                   <li class="d-flex align-items-center gap-2">
                     <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    Planning Calendar
+                    {% text "onsite_onboarding" label="Onsite Onboarding Text", value="Onsite Onboarding" %}
                   </li>
                   <li class="d-flex align-items-center gap-2">
                     <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    Capture One Integration
+                    {% text "editorial_projects" label="Editorial Projects Text", value="Editorial Projects" %}
                   </li>
                   <li class="d-flex align-items-center gap-2">
                     <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    Adobe Photoshop Integration
+                    {% text "vendor_portal" label="Vendor Portal Text", value="Vendor Portal" %}
                   </li>
                   <li class="d-flex align-items-center gap-2">
                     <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    Custom Reporting
+                    {% text "integration_support" label="Integration Support Text", value="Integration Support" %}
                   </li>
                   <li class="d-flex align-items-center gap-2">
                     <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    24/5 In-App Chat Support
+                    {% text "product_hub" label="Product Hub Text", value="Product Hub" %}
                   </li>
-
                   <li class="d-flex align-items-center gap-2">
                     <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    Collection Sharing
+                    {% text "3d_workflows" label="3D Workflows Text", value="3D Workflows" %}
                   </li>
                 </ul>
               </div>
@@ -273,13 +268,13 @@
 
           <div class="mt-5 mb-3 text-center">
             <h3 class="gap-2 d-flex align-items-center justify-content-center">
-              Elevate your studio with
+              {% text "elevate_studio_text" label="Elevate Studio Text", value="Elevate your studio with" %}
               <img
                 src="{{ get_asset_url('../images/module-icons/union.svg') }}"
                 alt="union"
                 class="d-none d-md-inline"
               />
-              AI-powered innovations.
+              {% text "ai_powered_innovations" label="AI Powered Innovations Text", value="AI-powered innovations." %}
             </h3>
             <img
               src="{{ get_asset_url('../images/module-icons/union.svg') }}"
@@ -288,9 +283,7 @@
             />
           </div>
           <p class="px-4 text-center w-75 mx-auto">
-            At Creative Force, we research, test, and develop innovative
-            AI-driven solutions that empower creative teams to transform their
-            content production processes.
+            {% text "creative_force_description" label="Creative Force Description", value="At Creative Force, we research, test, and develop innovative AI-driven solutions that empower creative teams to transform their content production processes." %}
           </p>
 
           <div class="row mt-4 gap-3 gap-lg-0">
@@ -306,10 +299,9 @@
                 <div
                   class="pt-4 pe-2 d-flex flex-column justify-content-center card-desc"
                 >
-                  <h4>E-Commerce Copywriting</h4>
+                  <h4>{% text "ecommerce_copywriting_title" label="E-Commerce Copywriting Title", value="E-Commerce Copywriting" %}</h4>
                   <p>
-                    Supercharge copy production with our multidimensional AI
-                    copywriter.
+                    {% text "ecommerce_copywriting_desc" label="E-Commerce Copywriting Description", value="Supercharge copy production with our multidimensional AI copywriter." %}
                   </p>
                 </div>
               </div>
@@ -335,10 +327,9 @@
                 <div
                   class="pt-4 pe-2 d-flex flex-column justify-content-center card-desc"
                 >
-                  <h4>Workflow</h4>
+                  <h4>{% text "workflow_title" label="Workflow Title", value="Workflow" %}</h4>
                   <p>
-                    Build flexible, custom workflows that integrate with the
-                    most advancedAI services available.
+                    {% text "workflow_desc" label="Workflow Description", value="Build flexible, custom workflows that integrate with the most advancedAI services available." %}
                   </p>
                 </div>
               </div>
@@ -358,10 +349,9 @@
                 <div
                   class="pt-5 pe-2 ps-4 d-flex flex-column justify-content-center card-desc"
                 >
-                  <h4>Garment Labels</h4>
+                  <h4>{% text "garment_labels_title" label="Garment Labels Title", value="Garment Labels" %}</h4>
                   <p>
-                    Convert garment label information into digital data during
-                    sample check-in.
+                    {% text "garment_labels_desc" label="Garment Labels Description", value="Convert garment label information into digital data during sample check-in." %}
                   </p>
                 </div>
               </div>
@@ -379,8 +369,10 @@
                 <div
                   class="pt-5 pe-2 ps-4 d-flex flex-column justify-content-center card-desc"
                 >
-                  <h4>Digital Models</h4>
-                  <p>Increase image variety with advanced digital models.</p>
+                  <h4>{% text "digital_models_title" label="Digital Models Title", value="Digital Models" %}</h4>
+                  <p>
+                    {% text "digital_models_desc" label="Digital Models Description", value="Increase image variety with advanced digital models." %}
+                  </p>
                 </div>
               </div>
             </div>
@@ -397,8 +389,10 @@
                 <div
                   class="pt-5 pe-2 ps-4 d-flex flex-column justify-content-center card-desc"
                 >
-                  <h4>Color Variations</h4>
-                  <p>Produce accurate and consistent color variations.</p>
+                  <h4>{% text "color_variations_title" label="Color Variations Title", value="Color Variations" %}</h4>
+                  <p>
+                    {% text "color_variations_desc" label="Color Variations Description", value="Produce accurate and consistent color variations." %}
+                  </p>
                 </div>
               </div>
             </div>
@@ -406,175 +400,133 @@
         </div>
       </section>
 
-  <section class="unlock-new py-5 position-relative overflow-hidden">
-        <div class="container d-flex align-items-center flex-column py-3 px-5">
-          <h4>Unlock new possibilities with custom studio add-ons.</h4>
-          <p class="w-75 text-center">
-            Streamline workflows with powerful extensions tailored to enhance
-            vendor collaboration and editorial projects, ensuring a seamless
-            content production experience.
-          </p>
-          <div
-            class="mt-4 px-4 rounded w-100 overflow-hidden position-relative unlock-new-card-top unlock-new-card"
-          >
-            <div class="row">
-              <div
-                class="col-4 d-flex justify-content-center d-none d-lg-block"
-              >
-                <div class="d-flex gap-2 position-absolute mansory-container">
-                  <div class="d-flex flex-column gap-2">
-                    <img src="{{ get_asset_url('../images/mansory-1.png') }}" alt="Image 1" />
-                    <img src="{{ get_asset_url('../images/mansory-1.png') }}" alt="Image 2" />
-                    <img src="{{ get_asset_url('../images/mansory-1.png') }}" alt="Image 3" />
-                  </div>
-                  <div class="d-flex flex-column gap-2 mt-5 pt-4">
-                    <img src="{{ get_asset_url('../images/mansory-1.png') }}" alt="Image 4" />
-                    <img src="{{ get_asset_url('../images/mansory-1.png') }}" alt="Image 5" />
-                    <img src="{{ get_asset_url('../images/mansory-1.png') }}" alt="Image 6" />
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-lg-8">
-                <div
-                  class="w-75 px-3 py-5 color-dark-purple justify-content-center d-flex flex-column h-100"
-                >
-                  <h4>Vendor-provided content extension</h4>
-                  <p>
-                    Streamline your workflow by managing vendor-provided assets
-                    from initial request to final upload, ensuring consistency
-                    and efficiency at every step.
-                  </p>
-                  <ul class="mt-3">
-                    <li class="mt-1">
-                      <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" class="me-1" />
-                      Upload directly in the portal
-                    </li>
-                    <li class="mt-1">
-                      <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" class="me-1" />
-                      Track unique image request IDs
-                    </li>
-                    <li class="mt-1">
-                      <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" class="me-1" />
-                      Visual style guides and standards
-                    </li>
-                    <li class="mt-1">
-                      <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" class="me-1" />
-                      Approvals for faster turnaround
-                    </li>
-                  </ul>
-                  <button class="blue-btn readmore-btn mt-3">read more</button>
-                </div>
-              </div>
-            </div>
-
-            <div class="add-on">add-on</div>
-            <img
-              src="{{ get_asset_url('../images/unlock-new-bottom-right-1.png') }}"
-              alt=""
-              class="unlock-new-bottom-right-img d-none d-xl-block"
-            />
-          </div>
-
-          <div
-            class="mt-4 px-4 rounded w-100 overflow-hidden position-relative unlock-new-card-bottom unlock-new-card"
-          >
-            <div class="row">
-              <div
-                class="col-4 d-flex justify-content-center d-none d-lg-block"
-              >
-                <img
-                  src="{{ get_asset_url('../images/editorial-1.png') }}"
-                  alt=""
-                  class="position-absolute editorial-1-img"
-                  height="100%"
-                />
-              </div>
-              <div class="col-12 col-lg-8 z-1">
-                <div
-                  class="w-75 px-3 py-5 color-dark-purple justify-content-center d-flex flex-column h-100"
-                >
-                  <h4>Editorial projects extension</h4>
-                  <p>
-                    Control every step of your editorial projects with ease —
-                    from planning and content creation to final approvals —
-                    ensuring teams stay aligned and projects run smoothly.
-                  </p>
-                  <ul class="mt-3">
-                    <li class="mt-1">
-                      <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" class="me-1" />
-                      Centralized editorial assets
-                    </li>
-                    <li class="mt-1">
-                      <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" class="me-1" />
-                      Collaborate in real-time
-                    </li>
-                    <li class="mt-1">
-                      <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" class="me-1" />
-                      Track progress and milestones
-                    </li>
-                    <li class="mt-1">
-                      <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" class="me-1" />
-                      Integrate visual guides
-                    </li>
-                  </ul>
-                  <button class="blue-btn readmore-btn mt-3">read more</button>
-                </div>
-              </div>
-            </div>
-
-            <div class="add-on">add-on</div>
-            <img
-              src="{{ get_asset_url('../images/unlock-new-bottom-right-2.png') }}"
-              alt=""
-              class="unlock-new-bottom-right-img d-none d-xl-block"
-            />
-          </div>
-        </div>
-
-        <img
-          src="{{ get_asset_url('../images/ellipse-bg.svg') }}"
-          alt="ellipse-bg"
-          class="ellipse-bg-img"
-        />
-      </section>
-    {# <div class="container">
-      <h4>{% module "section_heading" path="@hubspot/text" label="Section Heading" value="Unlock new possibilities with custom studio add-ons." %}</h4>
-    </div> #}
-
-    <section class="compare-plans bg-blue py-4 text-white">
-    <div class="container">
-      <div class="row">
+      <section class="unlock-new py-5 position-relative overflow-hidden">
+      <div class="container d-flex align-items-center flex-column py-3 px-5">
+        <h2>{% text "unlock_possibilities_title" label="Unlock Possibilities Title", value="Unlock new possibilities with custom studio add-ons." %}</h2>
+        <p class="w-75 text-center">
+          {% text "unlock_possibilities_desc" label="Unlock Possibilities Description", value="Streamline workflows with powerful extensions tailored to enhance vendor collaboration and editorial projects, ensuring a seamless content production experience." %}
+        </p>
         <div
-          class="col-12 col-lg-5 d-flex flex-column justify-content-center"
+          class="mt-4 px-4 rounded w-100 overflow-hidden position-relative unlock-new-card-top unlock-new-card"
         >
-          <h3>Compare plans</h3>
-          <div class="d-flex text-uppercase gap-3 fs-7 mt-2">
-            <div class="key-features">Key features</div>
-            <u class="all-features">all features</u>
-          </div>
-        </div>
-        <div class="col-12 col-lg-7 mt-lg-0 mt-4">
           <div class="row">
-            <div class="col-4">
-              <div class="fs-7">Starter</div>
-              <div class="h5 mt-1">$2,400 /mo</div>
-              <button class="white-btn fs-7">get a quote</button>
+            <div
+              class="col-4 d-flex justify-content-center d-none d-lg-block"
+            >
+              <div class="d-flex gap-2 position-absolute mansory-container">
+                <div class="d-flex flex-column gap-2">
+                  <img src="{{ get_asset_url('../images/mansory-1.png') }}" alt="Image 1" />
+                  <img src="{{ get_asset_url('../images/mansory-1.png') }}" alt="Image 2" />
+                  <img src="{{ get_asset_url('../images/mansory-1.png') }}" alt="Image 3" />
+                </div>
+                <div class="d-flex flex-column gap-2 mt-5 pt-4">
+                  <img src="{{ get_asset_url('../images/mansory-1.png') }}" alt="Image 4" />
+                  <img src="{{ get_asset_url('../images/mansory-1.png') }}" alt="Image 5" />
+                  <img src="{{ get_asset_url('../images/mansory-1.png') }}" alt="Image 6" />
+                </div>
+              </div>
             </div>
-            <div class="col-4">
-              <div class="fs-7">Core</div>
-              <div class="h5 mt-1">$4,100 /mo</div>
-              <button class="white-btn fs-7">get a quote</button>
-            </div>
-            <div class="col-4">
-              <div class="fs-7">Enterprise</div>
-              <div class="h5 mt-1">Custom</div>
-              <button class="white-btn fs-7">get a quote</button>
+            <div class="col-12 col-lg-8">
+              <div
+                class="w-75 px-3 py-5 color-dark-purple justify-content-center d-flex flex-column h-100"
+              >
+                <h4>{% text "vendor_content_title" label="Vendor Content Title", value="Vendor-provided content extension" %}</h4>
+                <p>
+                  {% text "vendor_content_desc" label="Vendor Content Description", value="Streamline your workflow by managing vendor-provided assets from initial request to final upload, ensuring consistency and efficiency at every step." %}
+                </p>
+                <ul class="mt-3">
+                  <li class="mt-1">
+                    <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" class="me-1" />
+                    {% text "upload_portal" label="Upload Portal Text", value="Upload directly in the portal" %}
+                  </li>
+                  <li class="mt-1">
+                    <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" class="me-1" />
+                    Track unique image request IDs
+                  </li>
+                  <li class="mt-1">
+                    <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" class="me-1" />
+                    Visual style guides and standards
+                  </li>
+                  <li class="mt-1">
+                    <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" class="me-1" />
+                    Approvals for faster turnaround
+                  </li>
+                </ul>
+                <button class="blue-btn readmore-btn mt-3">read more</button>
+              </div>
             </div>
           </div>
+
+          <div class="add-on">add-on</div>
+          <img
+            src="{{ get_asset_url('../images/unlock-new-bottom-right-1.png') }}"
+            alt=""
+            class="unlock-new-bottom-right-img d-none d-xl-block"
+          />
+        </div>
+
+        <div
+          class="mt-4 px-4 rounded w-100 overflow-hidden position-relative unlock-new-card-bottom unlock-new-card"
+        >
+          <div class="row">
+            <div
+              class="col-4 d-flex justify-content-center d-none d-lg-block"
+            >
+              <img
+                src="{{ get_asset_url('../images/editorial-1.png') }}"
+                alt=""
+                class="position-absolute editorial-1-img"
+                height="100%"
+              />
+            </div>
+            <div class="col-12 col-lg-8 z-1">
+              <div
+                class="w-75 px-3 py-5 color-dark-purple justify-content-center d-flex flex-column h-100"
+              >
+                <h4>Editorial projects extension</h4>
+                <p>
+                  Control every step of your editorial projects with ease —
+                  from planning and content creation to final approvals —
+                  ensuring teams stay aligned and projects run smoothly.
+                </p>
+                <ul class="mt-3">
+                  <li class="mt-1">
+                    <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" class="me-1" />
+                    Centralized editorial assets
+                  </li>
+                  <li class="mt-1">
+                    <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" class="me-1" />
+                    Collaborate in real-time
+                  </li>
+                  <li class="mt-1">
+                    <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" class="me-1" />
+                    Track progress and milestones
+                  </li>
+                  <li class="mt-1">
+                    <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" class="me-1" />
+                    Integrate visual guides
+                  </li>
+                </ul>
+                <button class="blue-btn readmore-btn mt-3">read more</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="add-on">add-on</div>
+          <img
+            src="{{ get_asset_url('../images/unlock-new-bottom-right-2.png') }}"
+            alt=""
+            class="unlock-new-bottom-right-img d-none d-xl-block"
+          />
         </div>
       </div>
-    </div>
-  </section>
+
+      <img
+        src="{{ get_asset_url('../images/ellipse-bg.svg') }}"
+        alt="ellipse-bg"
+        class="ellipse-bg-img"
+      />
+    </section>
 
   <section class="creative pt-5 position-relative pb-4">
     <div
@@ -710,10 +662,9 @@
         class="trusted-by py-5 position-relative overflow-hidden bg-light-purple"
       >
         <div class="container color-dark-purple text-center">
-          <h2>Trusted by industry leaders.</h2>
+          <h1>{% text "trusted_by_title" label="Trusted By Title", value="Trusted by industry leaders." %}</h1>
           <p class="mt-4 mb-5 pb-3">
-            See how creative force empowers brands to achieve faster results,
-            increase productivity, and streamline their creative processes.
+            {% text "trusted_by_description" label="Trusted By Description", value="See how creative force empowers brands to achieve faster results, increase productivity, and streamline their creative processes." %}
           </p>
 
           <div class="row">
@@ -750,9 +701,9 @@
                   <div class="trusted-card px-5 py-5 rounded text-center">
                     <img src="{{ get_asset_url('../images/module-icons/g2.svg') }}" alt="G2" />
                     <p class="mt-2 fw-semibold">
-                      “Creative Force isn't just software; it's a partnership
+                      "Creative Force isn't just software; it's a partnership
                       with a shared goal of creating efficiencies within
-                      workflows.”
+                      workflows."
                     </p>
                     <p class="fw-semibold text-uppercase fs-7 mt-3 mb-0">
                       Michelle M.
@@ -766,10 +717,10 @@
                 <div class="col-6 mt-4">
                   <div class="trusted-card px-5 pt-5 pb-4 rounded text-center">
                     <p class="fw-semibold">
-                      “Implementing Creative Force reduced a large amount of
+                      "Implementing Creative Force reduced a large amount of
                       unnecessary admin work which has improved efficiency and
                       lowered potential reshoots, which is a large cost- and
-                      time-saver.”
+                      time-saver."
                     </p>
                     <p class="mt-3 fs-7 mb-1">
                       <span class="fw-semibold">Joel Pammenter</span> — Senior
@@ -790,10 +741,10 @@
             <div class="col-md-4 col-12">
               <div class="trusted-card px-5 pt-5 pb-4 rounded text-center">
                 <p>
-                  “We can just come in, get into the flow, get into the groove.
+                  "We can just come in, get into the flow, get into the groove.
                   We pass our files off just like everyone else does. But all
                   that little painstaking, not fun stuff, is handled by the
-                  program.”
+                  program."
                 </p>
                 <p class="mt-3 fs-7 mb-1">
                   <span class="fw-semibold">Anthony nocella </span> — Lead
@@ -868,12 +819,9 @@
       <div class="container py-5 px-3 color-dark-purple">
         <div class="row">
           <div class="col-lg-6 col-12">
-            <h2>Security & Compliance.</h2>
+            <h2>{% text "security_compliance_title" label="Security Compliance Title", value="Security & Compliance." %}</h2>
             <p class="fw-semibold mt-3">
-              Built to meet the highest standards of data protection and
-              regulatory compliance. Our robust infrastructure includes
-              advanced encryption protocols, ensuring your data remains secure
-              and fully compliant at all times.
+              {% text "security_compliance_desc" label="Security Compliance Description", value="Built to meet the highest standards of data protection and regulatory compliance. Our robust infrastructure includes advanced encryption protocols, ensuring your data remains secure and fully compliant at all times." %}
             </p>
           </div>
           <div class="col-lg-6 col-12 mt-3 mt-lg-0">
@@ -914,24 +862,18 @@
     class="frequently-asked bg-light-purple position-relative overflow-hidden"
   >
     <div class="container py-5 color-dark-purple">
-      <h2 class="text-center">Frequently asked questions.</h2>
+      <h1 class="text-center">{% text "faq_title" label="FAQ Title", value="Frequently asked questions." %}</h1>
       <p class="mt-2 mb-4 text-center">
-        Looking for more information? Check out these frequently asked
-        questions about our pricing.
+        {% text "faq_desc" label="FAQ Description", value="Looking for more information? Check out these frequently asked questions about our pricing." %}
       </p>
 
       <details open>
         <summary class="fs-5 fw-semibold">
-          How do monthly and annual pricing differ?
+          {% text "faq_q1" label="FAQ Question 1", value="How do monthly and annual pricing differ?" %}
         </summary>
         <div class="pe-5">
           <p>
-            Tempor velit a nibh dui facilisis congue etiam amet. Efficitur
-            ullamcorper egestas maecenas ullamcorper ad interdum ridiculus
-            enim ad minim veniam, quis nostrud exercitation ullamco laboris
-            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-            in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-            nulla pariatur.
+            {% text "faq_a1" label="FAQ Answer 1", value="Tempor velit a nibh dui facilisis congue etiam amet. Efficitur ullamcorper egestas maecenas ullamcorper ad interdum ridiculus enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur." %}
           </p>
         </div>
       </details>
@@ -951,6 +893,111 @@
           <p>Content for Accordion Item 3</p>
         </div>
       </details>
+      <details close>
+        <summary class="fs-5 fw-semibold">
+          How do monthly and annual pricing differ?
+        </summary>
+        <div class="pe-5">
+          <p>
+            Tempor velit a nibh dui facilisis congue etiam amet. Efficitur
+            ullamcorper egestas maecenas ullamcorper ad interdum ridiculus
+            enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+            in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur.
+          </p>
+        </div>
+      </details>
+      <details close>
+        <summary class="fs-5 fw-semibold">
+          How do monthly and annual pricing differ?
+        </summary>
+        <div class="pe-5">
+          <p>
+            Tempor velit a nibh dui facilisis congue etiam amet. Efficitur
+            ullamcorper egestas maecenas ullamcorper ad interdum ridiculus
+            enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+            in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur.
+          </p>
+        </div>
+      </details>
+      <details close>
+        <summary class="fs-5 fw-semibold">
+          How do monthly and annual pricing differ?
+        </summary>
+        <div class="pe-5">
+          <p>
+            Tempor velit a nibh dui facilisis congue etiam amet. Efficitur
+            ullamcorper egestas maecenas ullamcorper ad interdum ridiculus
+            enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+            in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur.
+          </p>
+        </div>
+      </details>
+      <details close>
+        <summary class="fs-5 fw-semibold">
+          How do monthly and annual pricing differ?
+        </summary>
+        <div class="pe-5">
+          <p>
+            Tempor velit a nibh dui facilisis congue etiam amet. Efficitur
+            ullamcorper egestas maecenas ullamcorper ad interdum ridiculus
+            enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+            in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur.
+          </p>
+        </div>
+      </details>
+      <details close>
+        <summary class="fs-5 fw-semibold">
+          How do monthly and annual pricing differ?
+        </summary>
+        <div class="pe-5">
+          <p>
+            Tempor velit a nibh dui facilisis congue etiam amet. Efficitur
+            ullamcorper egestas maecenas ullamcorper ad interdum ridiculus
+            enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+            in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur.
+          </p>
+        </div>
+      </details>
+      <details close>
+        <summary class="fs-5 fw-semibold">
+          How do monthly and annual pricing differ?
+        </summary>
+        <div class="pe-5">
+          <p>
+            Tempor velit a nibh dui facilisis congue etiam amet. Efficitur
+            ullamcorper egestas maecenas ullamcorper ad interdum ridiculus
+            enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+            in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur.
+          </p>
+        </div>
+      </details>
+      <details close>
+        <summary class="fs-5 fw-semibold">
+          How do monthly and annual pricing differ?
+        </summary>
+        <div class="pe-5">
+          <p>
+            Tempor velit a nibh dui facilisis congue etiam amet. Efficitur
+            ullamcorper egestas maecenas ullamcorper ad interdum ridiculus
+            enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+            in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur.
+          </p>
+        </div>
+      </details>
     </div>
 
     <img
@@ -965,17 +1012,17 @@
           <div class="row">
             <div class="col-md-5 col-12">
               <h2>
-                Explore the
-                <i class="ai-driven fw-light"> AI-driven </i> future of content
-                production.
+                {% text "explore_title_1" label="Explore Title Part 1", value="Explore the" %}
+                <i class="ai-driven fw-light">{% text "explore_title_2" label="Explore Title Part 2", value="AI-driven" %}</i>
+                {% text "explore_title_3" label="Explore Title Part 3", value="future of content production." %}
               </h2>
               <p class="mt-3">
-                Transform your studio operations with innovative, AI-powered
-                solutions tailored for the future of content creation. Learn how
-                we can elevate your workflow today.
+                {% text "explore_desc" label="Explore Description", value="Transform your studio operations with innovative, AI-powered solutions tailored for the future of content creation. Learn how we can elevate your workflow today." %}
               </p>
 
-              <button class="blue-btn px-4">talk with us</button>
+              <button class="blue-btn px-4">
+                {% text "talk_with_us_button" label="Talk With Us Button", value="talk with us" %}
+              </button>
               <img
                 class="mt-4 talk-with"
                 src="{{ get_asset_url('../images/talk-with.png') }}"
