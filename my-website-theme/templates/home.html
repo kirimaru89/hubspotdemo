@@ -69,7 +69,7 @@
                 <ul class="mt-3">
                   <li class="d-flex align-items-center gap-2">
                     <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
-                    <span class="fw-bold">{% text "unlimited_users" label="Unlimited Users Text", value="Unlimited Users" %}</span>
+                    <span class="fw-bold">{% text "unlimited_users_5" label="Unlimited Users Text", value="Unlimited Users" %}</span>
                   </li>
                   <li class="d-flex align-items-center gap-2">
                     <img src="{{ get_asset_url('../images/module-icons/tick.svg') }}" alt="tick" />
@@ -401,9 +401,9 @@
       </section>
 
       <section class="unlock-new py-5 position-relative overflow-hidden">
-      <div class="container d-flex align-items-center flex-column py-3 px-5">
-        <h2>{% text "unlock_possibilities_title" label="Unlock Possibilities Title", value="Unlock new possibilities with custom studio add-ons." %}</h2>
-        <p class="w-75 text-center">
+        <div class="container d-flex align-items-center text-center flex-column py-3 px-5">
+          <h2>{% text "unlock_possibilities_title" label="Unlock Possibilities Title", value="Unlock new possibilities with custom studio add-ons." %}</h2>
+          <p class="w-75 text-center">
           {% text "unlock_possibilities_desc" label="Unlock Possibilities Description", value="Streamline workflows with powerful extensions tailored to enhance vendor collaboration and editorial projects, ensuring a seamless content production experience." %}
         </p>
         <div
@@ -428,7 +428,7 @@
             </div>
             <div class="col-12 col-lg-8">
               <div
-                class="w-75 px-3 py-5 color-dark-purple justify-content-center d-flex flex-column h-100"
+                class="w-75 px-3 py-5 color-dark-purple justify-content-center d-flex flex-column h-100 align-items-lg-start align-items-center"
               >
                 <h4>{% text "vendor_content_title" label="Vendor Content Title", value="Vendor-provided content extension" %}</h4>
                 <p>
@@ -481,7 +481,7 @@
             </div>
             <div class="col-12 col-lg-8 z-1">
               <div
-                class="w-75 px-3 py-5 color-dark-purple justify-content-center d-flex flex-column h-100"
+                class="w-75 px-3 py-5 color-dark-purple justify-content-center d-flex flex-column h-100 align-items-lg-start align-items-center"
               >
                 <h4>Editorial projects extension</h4>
                 <p>
@@ -527,6 +527,46 @@
         class="ellipse-bg-img"
       />
     </section>
+    <section class="compare-plans bg-blue py-3 py-lg-4 text-white">
+    <div class="container">
+      <div class="row px-4 px-sm-0">
+        <div
+          class="col-12 col-lg-5 d-flex flex-column justify-content-center"
+        >
+          <h2>{% text "compare_plans_title" label="Compare Plans Title", value="Compare plans" %}</h2>
+          <div class="d-flex text-uppercase gap-3 fs-7 mt-2">
+            <div class="key-features">{% text "compare_plans_key_features" label="Compare Plans Key Features", value="Key features" %}</div>
+            <u class="all-features">{% text "compare_plans_all_features" label="Compare Plans All Features", value="all features" %}</u>
+          </div>
+        </div>
+        <div class="col-12 col-lg-7 mt-lg-0 mt-3">
+          <div class="row">
+            <div
+              class="col-12 col-sm-4 d-flex d-sm-block align-items-baseline gap-3"
+            >
+              <div class="fs-7">{% text "compare_plans_starter" label="Compare Plans Starter", value="Starter" %}</div>
+              <div class="h5 mt-1 ms-auto" id="compare-starter-price"></div>
+              <button class="white-btn fs-7">{% text "compare_plans_get_a_quote_1" label="Compare Plans Get A Quote", value="get a quote" %}</button>
+            </div>
+            <div
+              class="col-12 col-sm-4 d-flex d-sm-block align-items-baseline mt-2 mt-sm-0 gap-3"
+            >
+              <div class="fs-7">{% text "compare_plans_core" label="Compare Plans Core", value="Core" %}</div>
+              <div class="h5 mt-1 ms-auto" id="compare-core-price"></div>
+              <button class="white-btn fs-7">{% text "compare_plans_get_a_quote_2" label="Compare Plans Get A Quote", value="get a quote" %}</button>
+            </div>
+            <div
+              class="col-12 col-sm-4 d-flex d-sm-block align-items-baseline mt-2 mt-sm-0 gap-3"
+            >
+              <div class="fs-7">{% text "compare_plans_enterprise" label="Compare Plans Enterprise", value="Enterprise" %}</div>
+              <div class="h5 mt-1 ms-auto">{% text "compare_plans_custom" label="Compare Plans Custom", value="Custom" %}</div>
+              <button class="white-btn fs-7">{% text "compare_plans_get_a_quote_3" label="Compare Plans Get A Quote", value="get a quote" %}</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section class="creative pt-5 position-relative pb-4">
     <div
@@ -550,9 +590,9 @@
             <td class="d-flex align-items-center gap-2">
               User <img src="{{ get_asset_url('../images/module-icons/info.svg') }}" class="opacity-25" />
             </td>
-            <td>{% text "unlimited_users" label="Unlimited Users Text", value="Unlimited" %}</td>
-            <td>{% text "unlimited_users" label="Unlimited Users Text", value="Unlimited" %}</td>
-            <td>{% text "unlimited_users" label="Unlimited Users Text", value="Unlimited" %}</td>
+            <td>{% text "unlimited_users_1" label="Unlimited Users Text 1", value="Unlimited" %}</td>
+            <td>{% text "unlimited_users_2" label="Unlimited Users Text 2", value="Unlimited" %}</td>
+            <td>{% text "unlimited_users_3" label="Unlimited Users Text 3", value="Unlimited" %}</td>
           </tr>
           <tr>
             <td class="d-flex align-items-center gap-2">
@@ -561,7 +601,7 @@
             </td>
             <td>{% text "one" label="One Text", value="1" %}</td>
             <td>{% text "three" label="Three Text", value="3" %}</td>
-            <td>{% text "unlimited_users" label="Unlimited Users Text", value="Unlimited" %}</td>
+            <td>{% text "unlimited_users_4" label="Unlimited Users Text 4", value="Unlimited" %}</td>
           </tr>
           <tr>
             <td class="d-flex align-items-center gap-2">
@@ -670,7 +710,7 @@
             <div class="col-md-8 col-12">
               <div class="row">
                 <div class="col-8">
-                  <div class="h-100 trusted-card px-5 py-5 rounded text-center">
+                  <div class="h-100 trusted-card p-lg-5 p-md-4 p-3 rounded text-center">
                     <p>
                       Decreased photographer onboarding time from 1 day to 20
                       minutes
@@ -681,13 +721,13 @@
                   </div>
                 </div>
                 <div class="col-4">
-                  <div class="h-100 trusted-card px-5 py-5 rounded text-center">
+                  <div class="h-100 trusted-card p-lg-5 p-md-4 p-3 rounded text-center">
                     <p>MACH Certified</p>
                     <img src="{{ get_asset_url('../images/mach.png') }}" width="100%" />
                   </div>
                 </div>
                 <div class="col-6 mt-4">
-                  <div class="trusted-card px-5 pb-5 rounded text-center">
+                  <div class="trusted-card p-lg-5 pt-lg-4 p-md-4 p-3 mb-3 rounded text-center">
                     <div class="big-3x">3x</div>
                     <p class="fw-semibold">
                       More marketing projects completed per year
@@ -697,7 +737,7 @@
                     </u>
                   </div>
 
-                  <div class="trusted-card px-5 py-5 rounded text-center">
+                  <div class="trusted-card p-lg-5 p-md-4 p-3 rounded text-center">
                     <img src="{{ get_asset_url('../images/module-icons/g2.svg') }}" alt="G2" />
                     <p class="mt-2 fw-semibold">
                       "Creative Force isn't just software; it's a partnership
@@ -714,7 +754,7 @@
                   </div>
                 </div>
                 <div class="col-6 mt-4">
-                  <div class="trusted-card px-5 pt-5 pb-4 rounded text-center">
+                  <div class="trusted-card p-lg-5 p-md-4 p-3 pb-4 rounded text-center">
                     <p class="fw-semibold">
                       "Implementing Creative Force reduced a large amount of
                       unnecessary admin work which has improved efficiency and
@@ -738,7 +778,7 @@
               </div>
             </div>
             <div class="col-md-4 col-12">
-              <div class="trusted-card px-5 pt-5 pb-4 rounded text-center">
+              <div class="trusted-card p-lg-5 p-md-4 p-3 pb-4 rounded text-center">
                 <p>
                   "We can just come in, get into the flow, get into the groove.
                   We pass our files off just like everyone else does. But all
@@ -751,7 +791,7 @@
                 </p>
                 <img src="{{ get_asset_url('../images/module-icons/nuuly.svg') }}" alt="" class="mb-5" />
               </div>
-              <div class="trusted-card px-5 pt-5 pb-4 rounded text-center">
+              <div class="trusted-card p-lg-5 p-md-4 p-3 pb-4 rounded text-center">
                 <div
                   class="d-flex align-items-center justify-content-around flex-wrap"
                 >
